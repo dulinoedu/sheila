@@ -1,7 +1,12 @@
-:host {
+:root {
   --line-height-display-xl: 57.6px;
   --line-height-display-lg: 48px;
   --line-height-display-md: 39.6px;
   --line-height-display-sm: 33.6px;
   --line-height-display-xs: 27.6px;
+  --line-height-xl: 28px;
+  --line-height-lg: 24px;
+  --line-height-md: 19.2px;
+  --line-height-sm: 15.6px;
+  --line-height-xs: 13.2px;
 }

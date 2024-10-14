@@ -1,2 +1,2 @@
 import "./tokens/index.css";
-import "./buttoneffect";
+import "./button";

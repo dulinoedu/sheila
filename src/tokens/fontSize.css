@@ -4,5 +4,9 @@
   --font-size-display-md: 33px;
   --font-size-display-sm: 28px;
   --font-size-display-xs: 23px;
-  --font-family-base: "Maven Pro", sans-serif;
+  --font-size-xl: 20px;
+  --font-size-lg: 19px;
+  --font-size-md: 16px;
+  --font-size-sm: 13px;
+  --font-size-xs: 11px;
 }
