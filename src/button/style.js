@@ -39,8 +39,8 @@ function style(self) {
       --padding-medium: 12px 20px;
       --padding-small: 8px 18px;
 
-      --transform-primary: translateY(5px);
-      --transform-secondary: translateY(5px);
+      --transform-primary: translateY(12px);
+      --transform-secondary: translateY(12px);
       --transform-tertiary: none;
     }
 
