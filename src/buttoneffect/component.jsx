@@ -1,9 +1,9 @@
 import { html } from '@bake-js/-o-id/dom';
 
-function component () {  
+function component (props) {
   return html`
-    <div>
-      teste
+    <div class="buttoneffect" color=${props.color}>
+      <slot></slot>
     </div>
   `
 }

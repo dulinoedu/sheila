@@ -1,0 +1,116 @@
+:root {
+  /* neutros */
+  --color-master-darkest: #0a0a0a;
+  --color-master-darker: #1a1a1a;
+  --color-master-dark: #2c2c2c;
+  --color-master: #626262;
+  --color-master-light: #e6e6e6;
+  --color-master-lighter: #f0f0f0;
+  --color-master-lightest: #fafafa;
+
+  /* Successes */
+  --color-success-darkest:#246139;
+  --color-success-darker:#29834b;
+  --color-success-dark:#2da75e;
+  --color-success: #2ECC71;
+  --color-success-light:#62d588;
+  --color-success-lighter:#86de9f;
+  --color-success-lightest:#a7e7b7;
+
+  /* Warnings */
+  --color-warning-darkest:#785c24;
+  --color-warning-darker:#a37d2c;
+  --color-warning-dark:#d09f34;
+  --color-warning: #FFC23C;
+  --color-warning-light:#ffcc61;
+  --color-warning-lighter:#ffd682;
+  --color-warning-lightest:#ffe0a1;
+
+  /* Oranges */
+  --color-orange-darkest: #783316;
+  --color-orange-darker: #a24219;
+  --color-orange-dark: #cd511c;
+  --color-orange: #FB601D;
+  --color-orange-light: #ff7d45;
+  --color-orange-lighter: #ff9869;
+  --color-orange-lightest: #ffb28e;
+
+  /* Dangers */
+  --color-danger-darkest: #6f2b21;
+  --color-danger-darker: #95362a;
+  --color-danger-dark: #bd4133;
+  --color-danger: #E74C3C;
+  --color-danger-light: #f16e5a;
+  --color-danger-lighter: #f98c79;
+  --color-danger-lightest: #ffa999;
+
+  /* academies */
+  --color-robotics-darkest:#190226;
+  --color-robotics-darker:#1c0330;
+  --color-robotics-dark:#20023b;
+  --color-robotics: #230046;
+  --color-robotics-light: #472763;
+  --color-robotics-lighter:#6b4e80;
+  --color-robotics-lightest:#8e789f;
+
+  --color-maker-darkest: #431a15;
+  --color-maker-darker: #571f19;
+  --color-maker-dark: #6d241d;
+  --color-maker: #832821;
+  --color-maker-light: #9c4c41;
+  --color-maker-lighter: #b26e63;
+  --color-maker-lightest: #c89188;
+
+  --color-game-darkest: #0b1f1f;
+  --color-game-darker: #092727;
+  --color-game-dark: #06302f;
+  --color-game: #003838;
+  --color-game-light: #305655;
+  --color-game-lighter: #577574;
+  --color-game-lightest: #7f9695;
+
+  --color-english-darkest: #13173c;
+  --color-english-darker: #121d4f;
+  --color-english-dark: #0d2262;
+  --color-english: #002877;
+  --color-english-light: #40478d;
+  --color-english-lighter: #6868a4;
+  --color-english-lightest: #8e8bba;
+
+  --color-inclusion-darkest: #3a0f2a;
+  --color-inclusion-darker: #4c0e37;
+  --color-inclusion-dark: #5e0944;
+  --color-inclusion: #710051;
+  --color-inclusion-light: #8a386c;
+  --color-inclusion-lighter: #a36087;
+  --color-inclusion-lightest: #bb87a4;
+
+  /* Blues */
+  --color-night-darkest:#0f1e31;
+  --color-night-darker:#0e2640;
+  --color-night-dark:#0a2e50;
+  --color-night: #013660;
+  --color-night-light: #395379;
+  --color-night-lighter:#607392;
+  --color-night-lightest:#8794ad;
+
+  --color-ocean-darkest:#234055;
+  --color-ocean-darker:#295573;
+  --color-ocean-dark:#2f6a92;
+  --color-ocean: #3481B2;
+  --color-ocean-light: #5f95bf;
+  --color-ocean-lighter:#82a9cb;
+  --color-ocean-lightest:#a2bed8;
+
+  --color-complete-darkest:#203f59;
+  --color-complete-darker:#255477;
+  --color-complete-dark:#286a97;
+  --color-complete: #2980B9;
+  --color-complete-light:#5b94c5;
+  --color-complete-lighter:#7fa8d0;
+  --color-complete-lightest:#a0bddc;
+
+  /* Pures */
+  --color-pure-white: #fff;
+  --color-pure-black: #000;
+}
