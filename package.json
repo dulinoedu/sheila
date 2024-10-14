@@ -1,0 +1,23 @@
+{
+  "name": "sheila",
+  "module": "sheila",
+  "type": "module",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/bun": "latest",
+    "husky": "^9.1.6",
+    "vite": "^5.4.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@biomejs/biome": "^1.9.3"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "dev": "vite",
+    "build": "vite build"
+  }
+}
