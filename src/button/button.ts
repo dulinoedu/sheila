@@ -8,10 +8,11 @@ import { dispatchFormAction, setState } from "./interface";
 import on from "@bake-js/-o-id/event";
 import joinCut from "../joinCut";
 import ifNotDisabled from "../ifNotDisabled";
+import Echo from "@bake-js/-o-id/echo";
 
 @define("lxp-button")
 @paint(component, style)
-class Button extends HTMLElement {
+class Button extends Echo(HTMLElement) {
   #disabled;
   #internals;
   #size;
