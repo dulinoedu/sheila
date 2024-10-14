@@ -1,0 +1,8 @@
+:root {
+  --font-size-display-xl: 48px;
+  --font-size-display-lg: 40px;
+  --font-size-display-md: 33px;
+  --font-size-display-sm: 28px;
+  --font-size-display-xs: 23px;
+  --font-family-base: "Maven Pro", sans-serif;
+}

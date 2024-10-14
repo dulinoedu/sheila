@@ -1,0 +1,58 @@
+:host {
+  --color-brand-primary: #3481b2ff;
+  --color-brand-primary-dark: #013660ff;
+  --color-brand-secondary: #fb601dff;
+
+  --color-academies-english: #002877ff;
+  --color-academies-game: #003838ff;
+  --color-academies-maker: #832821ff;
+  --color-academies-robotics: #230046ff;
+  --color-academies-inclusion: #710051ff;
+
+  --color-background-default: #f4fbffff;
+  --color-background-white: #ffffffff;
+
+  --color-grey-50: #f0f0f0ff;
+  --color-grey-100: #e1e1e1ff;
+  --color-grey-200: #c3c3c3ff;
+  --color-grey-300: #a6a6a6ff;
+  --color-grey-400: #888888ff;
+  --color-grey-500: #6a6a6aff;
+  --color-grey-600: #555555ff;
+  --color-grey-700: #404040ff;
+  --color-grey-800: #2a2a2aff;
+  --color-grey-900: #151515ff;
+  --color-grey-1000: #0b0b0bff;
+
+  --color-neutral-white: #ffffffff;
+  --color-neutral-black: #000000ff;
+
+  --color-primary-50: #ebf2f7ff;
+  --color-primary-100: #d6e6f0ff;
+  --color-primary-200: #aecde0ff;
+  --color-primary-300: #85b3d1ff;
+  --color-primary-400: #5d9ac1ff;
+  --color-primary-500: #3481b2ff;
+  --color-primary-600: #2a678eff;
+  --color-primary-700: #1f4d6bff;
+  --color-primary-800: #153447ff;
+  --color-primary-900: #0a1a24ff;
+  --color-primary-1000: #050d12ff;
+
+  --color-secondary-50: #ffefe8ff;
+  --color-secondary-100: #fedfd2ff;
+  --color-secondary-200: #fdbfa5ff;
+  --color-secondary-300: #fda077ff;
+  --color-secondary-400: #fc804aff;
+  --color-secondary-500: #fb601dff;
+  --color-secondary-600: #c94d17ff;
+  --color-secondary-700: #973a11ff;
+  --color-secondary-800: #64260cff;
+  --color-secondary-900: #321306ff;
+  --color-secondary-1000: #190a03ff;
+
+  --color-red: #d41f1fff;
+
+  --color-gradient-1: linear-gradient(90deg, #0eb4b7ff 0%, #08d788ff 100%);
+  --color-gradient-2: linear-gradient(90deg, #013660ff 0%, #135086ff 100%);
+}
