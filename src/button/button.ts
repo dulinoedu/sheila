@@ -17,6 +17,7 @@ class Button extends Echo(HTMLElement) {
   #internals;
   #size;
   #type;
+  #value;
   #variant;
 
   get disabled() {
@@ -24,7 +25,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   @attributeChanged("disabled", booleanAttribute)
-  @dispatchEvent("disabled-change")
+  @dispatchEvent("disabledChanged")
   @repaint
   set disabled(value) {
     this.#disabled = value;
@@ -35,7 +36,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   @attributeChanged("size")
-  @dispatchEvent("size-change")
+  @dispatchEvent("sizeChanged")
   @repaint
   set size(value) {
     this.#size = value;
@@ -46,10 +47,20 @@ class Button extends Echo(HTMLElement) {
   }
 
   @attributeChanged("type")
-  @dispatchEvent("type-change")
+  @dispatchEvent("typeChanged")
   @repaint
   set type(value) {
     this.#type = value;
+  }
+
+  get value() {
+    return this.#value;
+  }
+
+  @attributeChanged("value")
+  @dispatchEvent("valueChanged")
+  set value(value) {
+    this.#value = value;
   }
 
   get variant() {
@@ -57,7 +68,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   @attributeChanged("variant")
-  @dispatchEvent("variant-change")
+  @dispatchEvent("variantChanged")
   @repaint
   set variant(value) {
     this.#variant = value;
@@ -77,8 +88,8 @@ class Button extends Echo(HTMLElement) {
   @joinCut(dispatchFormAction)
   @ifNotDisabled
   click() {
-    const init = { bubbles: true, cancelable: true };
-    const event = new CustomEvent("click", init);
+    const init = { bubbles: true, cancelable: true, detail: this.value };
+    const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
     return this;
   }

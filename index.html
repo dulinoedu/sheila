@@ -7,13 +7,17 @@
 </head>
 <body>
   <main style="display: flex; flex-direction: column; gap: 20px;">
-    <lxp-button variant="primary" size="large">Label</lxp-button>
+    <lxp-button id="johzao" variant="primary" size="large" value="true">Johzao</lxp-button>
     <lxp-button variant="primary" size="medium">Label</lxp-button>
     <lxp-button variant="primary" size="small">Label</lxp-button>
     <lxp-button variant="primary" size="small" disabled>Label</lxp-button>
 
-    <lxp-button variant="secondary" size="large">Label</lxp-button>
-    <lxp-button variant="secondary" size="medium">Label</lxp-button>
+    <lxp-button variant="secondary" size="large">
+      Label
+      <id-echo-source on="johzao/clicked:attribute/disabled"></id-echo-source>
+      <id-echo-source on="maria/clicked:attribute/disabled"></id-echo-source>
+    </lxp-button>
+    <lxp-button id="maria" variant="secondary" size="medium" value="false">Maria</lxp-button>
     <lxp-button variant="secondary" size="small">Label</lxp-button>
     <lxp-button variant="secondary" size="small" disabled>Label</lxp-button>
 
