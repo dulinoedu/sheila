@@ -1,14 +1,14 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
-import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
-import component from "./component";
-import style from "./style";
-import booleanAttribute from "../booleanAttribute";
-import dispatchEvent from "../dispatchEvent";
 import { dispatchFormAction, setState } from "./interface";
-import on from "@bake-js/-o-id/event";
-import joinCut from "../joinCut";
-import ifNotDisabled from "../ifNotDisabled";
+import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
+import booleanAttribute from "../booleanAttribute";
+import component from "./component";
+import dispatchEvent from "../dispatchEvent";
 import Echo from "@bake-js/-o-id/echo";
+import ifNotDisabled from "../ifNotDisabled";
+import joinCut from "../joinCut";
+import on from "@bake-js/-o-id/event";
+import style from "./style";
 
 @define("lxp-button")
 @paint(component, style)
