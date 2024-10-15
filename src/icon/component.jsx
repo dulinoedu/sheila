@@ -2,124 +2,25 @@ import { html } from "@bake-js/-o-id/dom"
 import svg from './svg'
 
 function component (self) {
-  const adduser = html`
-    <button class="icon__button">
-      ${svg.adduser()}
-    </button>
-  `
-
-  const arrowDown = html`
-    <button class="icon__button">
-      ${svg.arrowDown()}
-    </button>
-  `
-
-  const arrowLeft = html`
-    <button class="icon__button">
-      ${svg.arrowLeft()}
-    </button>
-  `
-
-  const arrowRight = html`
-    <button class="icon__button">
-      ${svg.arrowRight()}
-    </button>
-  `
-
-  const arrowTop = html`
-    <button class="icon__button">
-      ${svg.arrowTop()}
-    </button>
-  `
-
-  const binocular = html`
-    <button class="icon__button">
-      ${svg.binocular()}
-    </button>
-  `
-
-  const camera = html`
-    <button class="icon__button">
-      ${svg.camera()}
-    </button>
-  `
-
-  const check = html`
-    <button class="icon__button">
-      ${svg.check()}
-    </button>
-  `
-
-  // const delete = html`
-  //   <button class="icon__button">
-  //     ${svg.delete()}
-  //   </button>
-  // `
-
-  const dots = html`
-    <button class="icon__button">
-      ${svg.dots()}
-    </button>
-  `
-
-  const eyesOff = html`
-    <button class="icon__button">
-      ${svg.eyesOff()}
-    </button>
-  `
-
-  const eyesOn = html`
-    <button class="icon__button">
-      ${svg.eyesOn()}
-    </button>
-  `
-
-  const filter = html`
-    <button class="icon__button">
-      ${svg.filter()}
-    </button>
-  `
-
-  const info = html`
-    <button class="icon__button">
-      ${svg.info()}
-    </button>
-  `
-
-  const logout = html`
-    <button class="icon__button">
-      ${svg.logout()}
-    </button>
-  `
-
-  const message = html`
-    <button class="icon__button">
-      ${svg.message()}
-    </button>
-  `
-  const password = html`
-    <button class="icon__button">
-      ${svg.password()}
-    </button>
-  `
-
-  const profile = html`
-    <button class="icon__button">
-      ${svg.profile()}
-    </button>
-  `
-
-  const search = html`
-    <button class="icon__button">
-      ${svg.search()}
-    </button>
-  `
-
-  const trash = html`
-    <button class="icon__button">
-      ${svg.trash()}
-    </button>
-  `
+  const adduser = html `${svg.adduser()}`
+  const arrowDown = html `${svg.arrowDown()}`
+  const arrowLeft = html `${svg.arrowLeft()}`
+  const arrowRight = html `${svg.arrowRight()}`
+  const arrowTop = html `${svg.arrowTop()}`
+  const binocular = html `${svg.binocular()}`
+  const camera = html `${svg.camera()}`
+  const check = html `${svg.check()}`
+  const dots = html `${svg.dots()}`
+  const eyesOff = html `${svg.eyesOff()}`
+  const eyesOn = html `${svg.eyesOn()}`
+  const filter = html `${svg.filter()}`
+  const info = html `${svg.info()}`
+  const logout = html `${svg.logout()}`
+  const message = html `${svg.message()}`
+  const password = html `${svg.password()}`
+  const profile = html `${svg.profile()}`
+  const search = html `${svg.search()}`
+  const trash = html `${svg.trash()}`
 
   switch (self.type) {
     case "adduser": 
@@ -145,9 +46,6 @@ function component (self) {
     
     case "check":
       return check
-    
-    // case "delete":
-    //   return delete
     
     case "dots":
       return dots
