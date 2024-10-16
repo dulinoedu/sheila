@@ -1,26 +1,46 @@
 {
-  "name": "sheila",
-  "module": "index.js",
-  "type": "module",
+  "author": "Cleber de M. Goncalves (deMGoncalves)",
+  "bugs": {
+    "url": "https://github.com/dulinoedu/sheila/issues"
+  },
+  "description": "",
   "devDependencies": {
-    "@commitlint/cli": "^19.5.0",
-    "@commitlint/config-conventional": "^19.5.0",
-    "@types/bun": "latest",
-    "husky": "^9.1.6",
-    "vite": "^5.4.9",
-    "typescript": "^5.0.0"
+    "@bake-js/-o-id": "0.0.67",
+    "@biomejs/biome": "^1.8.3",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "vite": "^5.3.1"
   },
-
-  "dependencies": {
-    "@bake-js/-o-id": "^0.0.66",
-    "@biomejs/biome": "^1.9.3"
+  "files": ["dist", "types.d.ts"],
+  "homepage": "https://github.com/dulinoedu/sheila#readme",
+  "license": "MIT",
+  "keywords": [
+    "Web Components",
+    "template",
+    "slot",
+    "shadowRoot",
+    "Javascript",
+    "HTML",
+    "CSS",
+    "UI"
+  ],
+  "main": "dist/sheila.cjs",
+  "module": "dist/sheila.js",
+  "name": "@dulinoedu/sheila",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dulinoedu/sheila.git"
   },
-
   "scripts": {
-    "prepare": "husky",
+    "build": "vite build",
     "dev": "vite",
-    "build": "vite build"
+    "prepare": "husky"
   },
   "source": "src/index.js",
-  "version": "0.0.1"
+  "styles": "dist/style.css",
+  "type": "module",
+  "types": "types.d.ts",
+  "version": "0.0.25"
 }
