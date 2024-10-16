@@ -5,7 +5,6 @@ import booleanAttribute from "../booleanAttribute";
 import component from "./component";
 import dispatchEvent from "../dispatchEvent";
 import Echo from "@bake-js/-o-id/echo";
-import ifNotDisabled from "../ifNotDisabled";
 import joinCut from "../joinCut";
 import on from "@bake-js/-o-id/event";
 import style from "./style";
@@ -84,9 +83,8 @@ class Button extends Echo(HTMLElement) {
     this.#internals = this.attachInternals();
   }
 
-  @on.click(":host *")
+  @on.click(":host(:not(disabled)) *")
   @joinCut(dispatchFormAction)
-  @ifNotDisabled
   click() {
     const init = { bubbles: true, cancelable: true, detail: this.value };
     const event = new CustomEvent("clicked", init);
@@ -94,7 +92,6 @@ class Button extends Echo(HTMLElement) {
     return this;
   }
 
-  @ifNotDisabled
   [dispatchFormAction]() {
     switch (this.type) {
       case "submit":
