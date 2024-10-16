@@ -1,13 +1,12 @@
-import { css } from '@bake-js/-o-id/dom'
+import { css } from "@bake-js/-o-id/dom";
 
-function style () {
+function style() {
   return css`
-    .icon__button {
-      border: none;
-      background: none;
-      cursor: pointer;
+    :host {
+      height: 24px;
+      width: 24px;
     }
-  `
+  `;
 }
 
-export default style
+export default style;

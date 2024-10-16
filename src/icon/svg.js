@@ -1,20 +1,20 @@
 const svg = {
-  adduser: () => 
+  adduser: () =>
     `
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M9 12C11.7614 12 14 9.76142 14 7C14 4.23858 11.7614 2 9 2C6.23858 2 4 4.23858 4 7C4 9.76142 6.23858 12 9 12Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M16 11V13M18 15H16V17M18 15H16M20 13H18V11" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5 21V19C5 16.2386 7.23858 14 10 14H11.76C14.2386 14 16 15.7614 16 18.24V21" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M9 12C11.7614 12 14 9.76142 14 7C14 4.23858 11.7614 2 9 2C6.23858 2 4 4.23858 4 7C4 9.76142 6.23858 12 9 12Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 11V13M18 15H16V17M18 15H16M20 13H18V11" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M5 21V19C5 16.2386 7.23858 14 10 14H11.76C14.2386 14 16 15.7614 16 18.24V21" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     `,
 
-  arrowDown: () => `
+  arrowdown: () => `
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M8 10L12 14L16 10" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `,
 
-  arrowLeft: () => `
+  arrowleft: () => `
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M14 8L10 12L14 16" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
@@ -132,8 +132,6 @@ const svg = {
       <path d="M9 9V17M15 9V17M4 7H20M16 7V5C16 4.44772 15.5523 4 15 4H9C8.44772 4 8 4.44772 8 5V7M19 7V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V7H19Z" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `,
-
-
 };
 
 export default svg;
