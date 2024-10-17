@@ -6,6 +6,7 @@ function style(self) {
       aspect-ratio: 4 / 1;
       height: 40px;
       width: auto;
+    }
   `;
 }
 

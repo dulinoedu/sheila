@@ -3,3 +3,4 @@ import "./button";
 import "./icon";
 import "./logo";
 import "./text";
+import "./avatar";
