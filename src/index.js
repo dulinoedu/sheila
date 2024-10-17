@@ -1,4 +1,5 @@
 import "./tokens/index.css";
 import "./button";
 import "./icon";
-import "./avatar"
+import "./logo";
+import "./text";
