@@ -1,2 +1,2 @@
 export const setState = Symbol("setState");
-export const onBlur = Symbol("onBlur");
+export const onLeave = Symbol("onLeave");

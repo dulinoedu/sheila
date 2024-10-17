@@ -6,7 +6,7 @@ import booleanAttribute from "../booleanAttribute";
 import dispatchEvent from "../dispatchEvent";
 import joinCut from "../joinCut";
 import component from "./component";
-import { onBlur, setState } from "./interface";
+import { onLeave, setState } from "./interface";
 import style from "./style";
 
 @define("lxp-menu")
@@ -33,8 +33,9 @@ class Menu extends Echo(HTMLElement) {
   }
 
   @on.mouseleave("*")
-  [onBlur]() {
-    this.remove();
+  [onLeave]() {
+    this.hidden = true;
+    console.log("teste");
     return this;
   }
 
