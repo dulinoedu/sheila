@@ -1,11 +1,14 @@
+import { resolve } from "path";
 import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
-    rollupOptions: {
-      input: {
-        main: './index.html'
-      }
+    lib: {
+      entry: {
+        sheila: resolve(__dirname, "src/index.js"),
+      },
+      formats: ["cjs", "es"],
     },
+    outDir: "dist",
   },
 });
