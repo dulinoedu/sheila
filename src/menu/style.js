@@ -11,12 +11,6 @@ function style(self) {
       padding: 8px;
       width: 200px;
     } 
-
-    :host(:state(hidden)) {
-      div {
-        display: none;
-      }
-    }
   `;
 }
 

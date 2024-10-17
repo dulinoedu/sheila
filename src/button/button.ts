@@ -1,12 +1,12 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
-import { dispatchFormAction, setState } from "./interface";
 import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
-import booleanAttribute from "../booleanAttribute";
-import component from "./component";
-import dispatchEvent from "../dispatchEvent";
 import Echo from "@bake-js/-o-id/echo";
-import joinCut from "../joinCut";
 import on from "@bake-js/-o-id/event";
+import booleanAttribute from "../booleanAttribute";
+import dispatchEvent from "../dispatchEvent";
+import joinCut from "../joinCut";
+import component from "./component";
+import { dispatchFormAction, setState } from "./interface";
 import style from "./style";
 
 @define("lxp-button")
@@ -63,7 +63,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   get variant() {
-    return (this.#variant ??= "primary");
+    return (this.#variant ??= "primary-solid");
   }
 
   @attributeChanged("variant")

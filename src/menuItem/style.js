@@ -4,27 +4,30 @@ function style() {
   return css`
     div {
       align-items: center;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    a {
       border-radius: 8px;
-      color: var(--color-grey-500);
+      box-sizing: border-box;
+      color: var(--color-grey-600);
       cursor: pointer;
-      font-family: var(--font-family-base); 
+      display: flex;
+      font-family: var(--font-family-base);
       font-size: var(--font-size-md);
       font-weight: var(--font-weight-regular);
-      text-decoration: none;
-      padding: 12px;
+      line-height: var(--line-height-md);
       height: 48px;
-      line-height: var(--line-height-lg);
-      width: 176px;
-    }   
+      padding: 12px;
+    }
 
-    a:hover {
-      background-color: #F4FBF8;
+    :host(:not(:state(disabled))) {
+      div:hover {
+        background-color: var(--color-primary-50);
+      }
+    }
+
+    :host(:state(disabled)) {
+      div {
+        color: var(--color-grey-200);
+        cursor: default;
+      }
     }
   `;
 }
