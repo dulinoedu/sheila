@@ -1,3 +1,5 @@
 import "./tokens/index.css";
 import "./button";
-import "./icon"
+import "./icon";
+import "./checkbox";
+ 
