@@ -4,14 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logo</title>
+  <title>Menu</title>
 </head>
 
 <body>
   <main style="display: flex; flex-direction: column; gap: 20px;">
     <a href="../../index.html">Voltar</a>
     <div style="display: flex; gap: 20px; flex-direction: column;">
-      <lxp-logo src="//donna.sistemadulino.com.br/dulino_azul.svg" alt="Dulino"></lxp-logo>
+      <lxp-menu visible>
+        <lxp-menu-item>Manu item</lxp-menu-item>
+        <lxp-menu-item>Manu item</lxp-menu-item>
+        <lxp-menu-item disabled>Manu item</lxp-menu-item>
+      </lxp-menu>
     </div>
   </main>
   <script type="module" src="../../src/index.js"></script>
