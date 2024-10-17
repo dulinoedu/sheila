@@ -33,9 +33,21 @@ class Menu extends Echo(HTMLElement) {
   }
 
   @on.mouseleave("*")
-  [onLeave]() {
-    this.hidden = true;
-    console.log("teste");
+  @joinCut(setState)
+  hide() {
+    this.#hidden = true;
+    const init = { bubbles: true, cancelable: true };
+    const event = new CustomEvent("hidded", init);
+    this.dispatchEvent(event);
+    return this;
+  }
+
+  @joinCut(setState)
+  show() {
+    this.#hidden = false;
+    const init = { bubbles: true, cancelable: true };
+    const event = new CustomEvent("hidded", init);
+    this.dispatchEvent(event);
     return this;
   }
 

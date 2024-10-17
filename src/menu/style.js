@@ -12,11 +12,9 @@ function style(self) {
       width: 200px;
     } 
 
-    :host {
-      :state(hidden) {
-        div {
-          display: none;
-        }
+    :host(:state(hidden)) {
+      div {
+        display: none;
       }
     }
   `;
