@@ -7,6 +7,7 @@ function style() {
       border-radius: 8px;
       box-sizing: border-box;
       color: var(--color-grey-600);
+      display: flex;
       cursor: pointer;
       display: flex;
       font-family: var(--font-family-base);
