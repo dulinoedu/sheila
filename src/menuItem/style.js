@@ -10,8 +10,10 @@ function style() {
     }
 
     a {
+      align-items: center;
       border-radius: 8px;
       color: var(--color-grey-500);
+      display: flex;
       cursor: pointer;
       font-family: var(--font-family-base); 
       font-size: var(--font-size-md);
@@ -23,8 +25,10 @@ function style() {
       width: 176px;
     }   
 
-    a:hover {
-      background-color: #F4FBF8;
+    :host(:state(hover)) {
+      a:hover {
+        background-color: #F4FBFF; 
+      }
     }
   `;
 }
