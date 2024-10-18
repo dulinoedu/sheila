@@ -1,12 +1,13 @@
 import { html } from "@bake-js/-o-id/dom";
-import bene from "./img.jpg";
 
-function component() {
+function component(self) {
   return html`
-    <div>
-      <slot>
-      </slot>
-    </div>
+    <img
+      onerror="this.style.setProperty('border', 'none')"
+      src="${self.src}"
+      alt="${self.alt}"
+      loading="${self.loading}"
+    />
   `;
 }
 
