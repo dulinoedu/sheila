@@ -1,41 +1,49 @@
-import { paint, repaint } from "@bake-js/-o-id/dom";
-import component from "./component";
-import Echo from "@bake-js/-o-id/echo";
 import { attributeChanged, define } from "@bake-js/-o-id";
-import dispatchEvent from "../dispatchEvent"
-import style from "./style"
+import { paint, repaint } from "@bake-js/-o-id/dom";
+import Echo from "@bake-js/-o-id/echo";
+import on from "@bake-js/-o-id/event";
+import dispatchEvent from "../dispatchEvent";
+import component from "./component";
+import style from "./style";
 
 @define("lxp-checkbox")
 @paint(component, style)
 class Checkbox extends Echo(HTMLElement) {
-  #size;
-  #gap;
+  #selected;
+  #color;
 
-  @attributeChanged("gap")
-  @dispatchEvent("gapChanged")
+  get color() {
+    return (this.#color ??= "");
+  }
+
+  @attributeChanged("color")
+  @dispatchEvent("colorChanged")
   @repaint
-  set gap(value) {
-    this.#gap = value;
+  set color(value) {
+    this.#color = value;
   }
 
-  get gap() {
-    return (this.#gap ??= "")
+  get selected() {
+    return (this.#selected ??= "false");
   }
-  
-  @attributeChanged("size")
-  @dispatchEvent("sizeChanged")
+
+  @attributeChanged("selected")
+  @dispatchEvent("selectedChanged")
   @repaint
-  set size(value) {
-    this.#size = value;
-  }
-
-  get size() {
-    return (this.#size ??= "")
+  set selected(value) {
+    this.#selected = value;
   }
 
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+  }
+
+  @on.click(":host *")
+  @repaint
+  click() {
+    this.#selected = !this.selected;
+    this.dispatchEvent(new CustomEvent("changed", { detail: this.selected }));
   }
 }
 
