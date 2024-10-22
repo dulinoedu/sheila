@@ -5,6 +5,9 @@ function style(self) {
     :host {
       --size-small: 48px;
       --size-large: 72px;
+      display: block;
+      height: var(--size-${self.size}, var(--size-small));
+      width: var(--size-${self.size}, var(--size-small));
     }
 
     img {
@@ -13,6 +16,7 @@ function style(self) {
       background: linear-gradient(to right, #00B0AD, #00E675);
       border-radius: 50%;
       border: 3px solid rgb(49, 129, 178);
+      box-sizing: border-box;
       color: white;
       cursor: pointer;
       display: block;
