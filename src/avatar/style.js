@@ -3,6 +3,10 @@ import { css } from "@bake-js/-o-id/dom";
 function style(self) {
   return css`
     :host {
+      --font-size-small: var(--font-size-md);
+      --font-size-large: var(--font-size-display-xs);
+      --line-height-small: var(--line-height-md);
+      --line-height-large: var(--line-height-display-xs);
       --size-small: 48px;
       --size-large: 72px;
       display: block;
@@ -31,13 +35,15 @@ function style(self) {
       border-radius: 50%;
       border: 3px solid rgb(49, 129, 178);
       box-sizing: border-box;
-      color: white;
+      color: var(--color-neutral-white);
       display: flex;
-      font-family: 'maven pro';
-      font-weight: 500;
+      font-family: var(--font-family-base);
+      font-size: var(--font-size-${self.size});
+      font-weight: var(--font-weight-medium);
       height: var(--size-${self.size}, var(--size-small));
       justify-content: center;
       left: 0;
+      line-height: var(--line-height-${self.size});
       position: absolute;
       top: 0;
       width: var(--size-${self.size}, var(--size-small));
