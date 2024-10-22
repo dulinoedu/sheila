@@ -34,7 +34,7 @@ class Menu extends Echo(HTMLElement) {
   hide() {
     const init = { bubbles: true, cancelable: true };
     const event = new CustomEvent("hidded", init);
-    this.setAttribute("visible", "true");
+    this.removeAttribute("visible");
     this.dispatchEvent(event);
     return this;
   }
@@ -42,7 +42,7 @@ class Menu extends Echo(HTMLElement) {
   show() {
     const init = { bubbles: true, cancelable: true };
     const event = new CustomEvent("hidded", init);
-    this.setAttribute("visible", "false");
+    this.setAttribute("visible", "true");
     this.dispatchEvent(event);
     return this;
   }

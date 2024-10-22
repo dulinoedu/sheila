@@ -1,5 +1,6 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
 import { paint, repaint } from "@bake-js/-o-id/dom";
+import Echo from "@bake-js/-o-id/echo";
 import on from "@bake-js/-o-id/event";
 import dispatchEvent from "../dispatchEvent";
 import component from "./component";
@@ -7,7 +8,7 @@ import style from "./style";
 
 @define("lxp-avatar")
 @paint(component, style)
-class Avatar extends HTMLElement {
+class Avatar extends Echo(HTMLElement) {
   #src;
   #alt;
   #loading;
@@ -72,7 +73,6 @@ class Avatar extends HTMLElement {
     const init = { bubbles: true, cancelable: true };
     const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
-
     return this;
   }
 }
