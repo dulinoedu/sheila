@@ -14,6 +14,18 @@
     <a href="./src/checkbox/example.html">Checkbox</a>
     <a href="./src/text/example.html">Text</a>
     <a href="./src/logo/example.html">Logo</a>
+    <a href="./src/menu/example.html">Menu</a>
+    <a href="./src/menuItem/example.html">Menu Item</a>
+    <a href="./src/avatar/example.html">Avatar</a>
+    <lxp-button on="lxp-menu/selected:attribute/variant">botao</lxp-button>
+    <lxp-avatar alt="teste eae"></lxp-avatar>
+    <lxp-menu>
+      <lxp-menu-item value="primary-solid">solid</lxp-menu-item>
+      <lxp-menu-item value="primary-ghost">ghost</lxp-menu-item>
+
+      <id-echo-source on="lxp-avatar/clicked:method/show"></id-echo-source>
+      <id-echo-source on="lxp-menu-item/clicked:method/hide"></id-echo-source>
+    </lxp-menu>
   </main>
   <script type="module" src="./src/index.js"></script>
 </body>

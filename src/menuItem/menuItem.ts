@@ -1,23 +1,20 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
-import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
+import { paint, willPaint } from "@bake-js/-o-id/dom";
 import Echo from "@bake-js/-o-id/echo";
 import on from "@bake-js/-o-id/event";
 import booleanAttribute from "../booleanAttribute";
 import dispatchEvent from "../dispatchEvent";
 import joinCut from "../joinCut";
 import component from "./component";
-import { dispatchFormAction, setState } from "./interface";
+import { setState } from "./interface";
 import style from "./style";
 
-@define("lxp-button")
+@define("lxp-menu-item")
 @paint(component, style)
-class Button extends Echo(HTMLElement) {
+class MenuItem extends Echo(HTMLElement) {
   #disabled;
   #internals;
-  #size;
-  #type;
   #value;
-  #variant;
 
   get disabled() {
     return (this.#disabled ??= false);
@@ -25,35 +22,13 @@ class Button extends Echo(HTMLElement) {
 
   @attributeChanged("disabled", booleanAttribute)
   @dispatchEvent("disabledChanged")
-  @repaint
+  @joinCut(setState)
   set disabled(value) {
     this.#disabled = value;
   }
 
-  get size() {
-    return (this.#size ??= "medium");
-  }
-
-  @attributeChanged("size")
-  @dispatchEvent("sizeChanged")
-  @repaint
-  set size(value) {
-    this.#size = value;
-  }
-
-  get type() {
-    return (this.#type ??= "submit");
-  }
-
-  @attributeChanged("type")
-  @dispatchEvent("typeChanged")
-  @repaint
-  set type(value) {
-    this.#type = value;
-  }
-
   get value() {
-    return this.#value;
+    return (this.#value ??= "");
   }
 
   @attributeChanged("value")
@@ -62,45 +37,17 @@ class Button extends Echo(HTMLElement) {
     this.#value = value;
   }
 
-  get variant() {
-    return (this.#variant ??= "primary-solid");
-  }
-
-  @attributeChanged("variant")
-  @dispatchEvent("variantChanged")
-  @repaint
-  set variant(value) {
-    this.#variant = value;
-  }
-
-  static get formAssociated() {
-    return true;
-  }
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
     this.#internals = this.attachInternals();
   }
 
-  @on.click(":host(:not(disabled)) *")
-  @joinCut(dispatchFormAction)
+  @on.click(":host(:not(:state(disabled))) *")
   click() {
     const init = { bubbles: true, cancelable: true, detail: this.value };
     const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
-    return this;
-  }
-
-  [dispatchFormAction]() {
-    switch (this.type) {
-      case "submit":
-        this.#internals.form?.requestSubmit();
-        break;
-      case "reset":
-        this.#internals.form?.reset();
-        break;
-    }
     return this;
   }
 
@@ -113,4 +60,4 @@ class Button extends Echo(HTMLElement) {
   }
 }
 
-export default Button;
+export default MenuItem;
