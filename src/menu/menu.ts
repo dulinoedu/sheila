@@ -31,6 +31,7 @@ class Menu extends Echo(HTMLElement) {
     this.attachShadow({ mode: "open" });
   }
 
+  @on.mouseleave("*")
   hide() {
     const init = { bubbles: true, cancelable: true };
     const event = new CustomEvent("hidded", init);
