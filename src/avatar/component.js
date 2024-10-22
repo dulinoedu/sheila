@@ -1,4 +1,5 @@
 import { html } from "@bake-js/-o-id/dom";
+import fallback from "./fallback.svg";
 
 function component(self) {
   return html`
@@ -6,7 +7,7 @@ function component(self) {
       alt="${self.alt}"
       loading="${self.loading}"
       src="${self.src}"
-      onerror="this.style.setProperty('border', 'none')"
+      onerror="this.setAttribute('src', '${fallback}'); this.setAttribute('data-alt', '${self.alt}')"
     />
   `;
 }
