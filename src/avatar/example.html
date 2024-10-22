@@ -13,6 +13,12 @@
     <lxp-avatar src="https://hzinyrqqkeqizojcotoj.supabase.co/storage/v1/object/public/avatars/a5114976-0582-4e8c-b54e-8457e71f1a55"></lxp-avatar>
     <lxp-avatar src="" alt="dijalma santos cavalcante de carvalho"></lxp-avatar>
     <lxp-avatar src="teste de url incorreta" size="large"></lxp-avatar>
+
+    <lxp-menu>
+      <lxp-menu-item value="asdf">ASDF</lxp-menu-item>
+      <id-echo-source on="lxp-avatar/clicked:method/show"></id-echo-source>
+      <id-echo-source on="lxp-menu/selected:attribute/visible|equals=asdf|not"></id-echo-source>
+    </lxp-menu>
   </main>
 
   <script type="module" src="../../src/index.js"></script>
