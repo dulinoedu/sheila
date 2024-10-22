@@ -3,7 +3,7 @@ import svg from "./svg";
 
 function component(self) {
   return html`
-    <div>
+    <div class="checkbox">
       ${self.selected ? svg.check() : svg.uncheck()}
       <slot></slot>
     </div>
