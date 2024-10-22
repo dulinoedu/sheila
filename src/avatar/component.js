@@ -7,8 +7,9 @@ function component(self) {
       alt="${self.alt}"
       loading="${self.loading}"
       src="${self.src}"
-      onerror="this.setAttribute('src', '${fallback}'); this.setAttribute('data-alt', '${self.alt}')"
+      onerror="this.remove()"
     />
+    <div>${self.alt}</div>
   `;
 }
 
