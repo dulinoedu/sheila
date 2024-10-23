@@ -24,6 +24,7 @@ function style() {
       font-size: var(--font-size-md);
       font-weight: var(--font-weight-medium);
       font-family: var(--font-family-base);
+      text-decoration: none;
     }
 
     div {

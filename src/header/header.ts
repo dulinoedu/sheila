@@ -11,7 +11,8 @@ import style from "./style";
 @paint(component, style)
 class Header extends Echo(HTMLElement) {
   #selected;
-  #src;
+  #user;
+  #school;
   #value;
 
   get selected() {
@@ -35,15 +36,26 @@ class Header extends Echo(HTMLElement) {
     this.#value = value;
   }
 
-  get src() {
-    return (this.#src ??= "");
+  get user() {
+    return (this.#user ??= "");
   }
 
-  @attributeChanged("src")
-  @dispatchEvent("srcChanged")
+  @attributeChanged("user")
+  @dispatchEvent("userChanged")
   @repaint
-  set src(value) {
-    this.#src = value;
+  set user(value) {
+    this.#user = value;
+  }
+
+  get school() {
+    return (this.#school ??= "");
+  }
+
+  @attributeChanged("school")
+  @dispatchEvent("schoolChanged")
+  @repaint
+  set school(value) {
+    this.#school = value;
   }
 
   constructor() {
@@ -54,7 +66,7 @@ class Header extends Echo(HTMLElement) {
   @on.click("lxp-text")
   @repaint
   click() {
-    this.#selected = !this.selected;
+    console.log("teste");
     const init = { bubbles: true, cancelable: true, detail: this.value };
     const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
