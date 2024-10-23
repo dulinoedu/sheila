@@ -4,7 +4,7 @@ export default defineConfig({
   test: {
     browser: {
       enable: true,
-      headless: false,
+      headless: true,
       name: "chrome",
       provider: "webdriverio",
     },
