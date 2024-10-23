@@ -4,14 +4,14 @@
 
 ## Tipo de Mudança
 
-- [ ] `feat` - **Novo Recurso**: Adição de uma nova funcionalidade ao projeto.
-- [ ] `fix` - **Correção de Bug**: Alteração que resolve um problema ou defeito no sistema.
-- [ ] `chore` - **Manutenção**: Tarefas de suporte ou manutenção que não afetam a funcionalidade ou o código de produção (ex.: atualizações de dependências).
-- [ ] `refactor` - **Refatoração**: Alteração no código que não adiciona nova funcionalidade ou corrige bugs, mas melhora a estrutura do código.
-- [ ] `perf` - **Melhoria de Desempenho**: Mudanças no código que melhoram o desempenho sem modificar a funcionalidade.
-- [ ] `hotfix` - **Correção de Urgência**: Correção crítica que precisa ser implementada imediatamente, afetando o funcionamento essencial.
-- [ ] `docs` - **Documentação**: Mudanças na documentação, como atualizações de README, guias, ou outros documentos.
-- [ ] `style` - **Ajuste de Estilo**: Alterações de formatação, como espaçamento ou estilo de código, que não afetam a lógica.
+- [ ] `feat` - Adição de uma nova funcionalidade ao projeto.
+- [ ] `fix` -  Alteração que resolve um problema ou defeito no sistema.
+- [ ] `chore` - Tarefas de suporte ou manutenção que não afetam a funcionalidade ou o código de produção (ex.: atualizações de dependências).
+- [ ] `refactor` - Alteração no código que não adiciona nova funcionalidade ou corrige bugs, mas melhora a estrutura do código.
+- [ ] `perf` - Mudanças no código que melhoram o desempenho sem modificar a funcionalidade.
+- [ ] `hotfix` - Correção crítica que precisa ser implementada imediatamente, afetando o funcionamento essencial.
+- [ ] `docs` - Mudanças na documentação, como atualizações de README, guias, ou outros documentos.
+- [ ] `style` -  Alterações de formatação, como espaçamento ou estilo de código, que não afetam a lógica.
 
 ## Checklist
 
