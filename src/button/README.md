@@ -111,6 +111,8 @@ const button = document.querySelector('lxp-button');
 button.click();
 ```
 
+---
+
 ## Exemplo Completo
 
 ```html
