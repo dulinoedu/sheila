@@ -132,6 +132,26 @@ const svg = {
       <path d="M9 9V17M15 9V17M4 7H20M16 7V5C16 4.44772 15.5523 4 15 4H9C8.44772 4 8 4.44772 8 5V7M19 7V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V7H19Z" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `,
+
+  checkbox: () => `
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <rect x="2.75439" y="2.75" width="14.5" height="14.5" rx="4.25" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `,
+
+  checked: () => `
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <rect x="2.75439" y="2.75" width="14.5" height="14.5" rx="4.25" fill="currentcolor" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12.6757 8.4267L9.33901 11.7614L7.33301 9.76142" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `,
+
+  unchecked: () => `
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+      <rect x="2.75439" y="2.75" width="14.5" height="14.5" rx="4.25" fill="currentcolor" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12.3633 9.85941L7.6459 9.858" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  `,
 };
 
 export default svg;
