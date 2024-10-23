@@ -12,8 +12,14 @@ function style() {
       padding: var(--spacing_inset-xs);
     }
 
-    .pipe {
-      background-color: var(--color-gray-200);
+    nav {
+      align-items: center;
+      display: flex;
+      gap: 32px; 
+    }
+
+    div {
+      background-color: var(--color-grey-200);
       height: 30px;
       width: 2px;
     }
