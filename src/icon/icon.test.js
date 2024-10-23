@@ -45,6 +45,7 @@ describe("Icon component", () => {
     // Espera o evento 'useChanged' ser disparado
     await new Promise((resolve) => (done = resolve));
 
+    expect(listener).toHaveBeenCalled();
     expect(icon.use).toBe("uppercase-icon"); // valor convertido para minúsculas
   });
 });
