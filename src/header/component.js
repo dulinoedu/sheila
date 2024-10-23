@@ -6,9 +6,9 @@ function component(self) {
       ${self.selected ? console.log("Painel Inicial") : console.log("Desempenho")}
       <lxp-logo src="//donna.sistemadulino.com.br/dulino_azul.svg" alt="Dulino"></lxp-logo>
         <nav>
-          <a>Painel Inicial</a>
+          <a src="${self.src}">Painel Inicial</a>
           <div></div>
-          <a>Desempenho</a>
+          <a src="${self.src}">Desempenho</a>
         </nav>
         <lxp-avatar src="" alt="Zezim Dev"></lxp-avatar>
     </header>

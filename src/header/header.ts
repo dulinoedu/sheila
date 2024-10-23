@@ -11,6 +11,7 @@ import style from "./style";
 @paint(component, style)
 class Header extends Echo(HTMLElement) {
   #selected;
+  #src;
   #value;
 
   get selected() {
@@ -32,6 +33,17 @@ class Header extends Echo(HTMLElement) {
   @dispatchEvent("valueChanged")
   set value(value) {
     this.#value = value;
+  }
+
+  get src() {
+    return (this.#src ??= "");
+  }
+
+  @attributeChanged("src")
+  @dispatchEvent("srcChanged")
+  @repaint
+  set src(value) {
+    this.#src = value;
   }
 
   constructor() {
