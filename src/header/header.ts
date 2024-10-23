@@ -63,10 +63,14 @@ class Header extends Echo(HTMLElement) {
     this.attachShadow({ mode: "open" });
   }
 
-  @on.click("lxp-text")
-  @repaint
-  click() {
-    console.log("teste");
+  @on.click("a")
+  click(e) {
+    const links = this.shadowRoot.querySelectorAll("a");
+    links.forEach((link) => {
+      link.removeAttribute("selected");
+    });
+
+    e.target.setAttribute("selected", true);
     const init = { bubbles: true, cancelable: true, detail: this.value };
     const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
