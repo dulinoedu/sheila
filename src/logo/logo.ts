@@ -13,17 +13,6 @@ class Logo extends Echo(HTMLElement) {
   #loading;
   #src;
 
-  get src() {
-    return (this.#src ??= "");
-  }
-
-  @attributeChanged("src")
-  @dispatchEvent("srcChanged")
-  @repaint
-  set src(value) {
-    this.#src = value;
-  }
-
   get alt() {
     return (this.#alt ??= "");
   }
@@ -44,6 +33,17 @@ class Logo extends Echo(HTMLElement) {
   @repaint
   set loading(value) {
     this.#loading = value;
+  }
+
+  get src() {
+    return (this.#src ??= "");
+  }
+
+  @attributeChanged("src")
+  @dispatchEvent("srcChanged")
+  @repaint
+  set src(value) {
+    this.#src = value;
   }
 
   constructor() {

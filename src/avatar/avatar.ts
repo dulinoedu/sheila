@@ -9,32 +9,10 @@ import style from "./style";
 @define("lxp-avatar")
 @paint(component, style)
 class Avatar extends Echo(HTMLElement) {
-  #src;
   #alt;
   #loading;
   #size;
-
-  get src() {
-    return (this.#src ??= "");
-  }
-
-  @attributeChanged("src")
-  @dispatchEvent("srcChanged")
-  @repaint
-  set src(value) {
-    this.#src = value;
-  }
-
-  get size() {
-    return (this.#size ??= "small");
-  }
-
-  @attributeChanged("size")
-  @dispatchEvent("sizeChanged")
-  @repaint
-  set size(value) {
-    this.#size = value;
-  }
+  #src;
 
   get alt() {
     return (this.#alt ??= "")
@@ -61,6 +39,28 @@ class Avatar extends Echo(HTMLElement) {
   @repaint
   set loading(value) {
     this.#loading = value;
+  }
+
+  get size() {
+    return (this.#size ??= "small");
+  }
+
+  @attributeChanged("size")
+  @dispatchEvent("sizeChanged")
+  @repaint
+  set size(value) {
+    this.#size = value;
+  }
+
+  get src() {
+    return (this.#src ??= "");
+  }
+
+  @attributeChanged("src")
+  @dispatchEvent("srcChanged")
+  @repaint
+  set src(value) {
+    this.#src = value;
   }
 
   constructor() {
