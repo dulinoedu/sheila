@@ -33,9 +33,8 @@ function style() {
       width: 2px;
     }
 
-    lxp-text[selected] {
-      font-weight: bold;
-      color: var(--color-neutral-black);
+    a[selected] {
+      color: var(--color-grey-700);
     }
   `;
 }
