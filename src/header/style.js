@@ -17,6 +17,14 @@ function style() {
       display: flex;
       gap: 32px; 
     }
+    
+    a {
+      color: var(--color-grey-400);
+      cursor: pointer;
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-medium);
+      font-family: var(--font-family-base);
+    }
 
     div {
       background-color: var(--color-grey-200);
