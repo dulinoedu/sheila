@@ -5,9 +5,9 @@ function style() {
     button {
       align-items: center;
       background-color: transparent;
-      border: 1px solid #3481B2;
+      border: 1px solid var(--color-brand-primary);
       border-radius: 100px;
-      color: #3481B2;
+      color: var(--color-brand-primary);
       cursor: pointer;
       display: flex;
       font-family: var(--font-family-base);
@@ -29,11 +29,11 @@ function style() {
 
     :host([selected]) {
       button {
-        background-color: #3481B2;
+        background-color: var(--color-brand-primary);
         color: var(--color-neutral-white);
 
         &:hover {
-          background-color: #3481B2;
+          background-color: var(--color-brand-primary);
           color: var(--color-neutral-white);
         }
       }
