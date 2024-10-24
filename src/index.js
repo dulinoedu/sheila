@@ -7,4 +7,5 @@ import "./menu";
 import "./menuItem";
 import "./text";
 import "./avatar";
+import "./header";
 import "./loading";
