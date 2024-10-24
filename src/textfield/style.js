@@ -15,17 +15,14 @@ function style() {
       align-items: start;
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-sm);
+      gap: 8px;
       position: relative;
       width: var(--width-xxs);
     }
 
     .textField__label {
-      color: var(--text-secondary);
-      font-family: var(--font-family);
-      font-size: var(--font-size-sm);
-      font-weight: var(--font-weight-medium);
-      line-height: var(--line-height-sm);
+      color: black;
+      font-family: 'maven pro';
     }
 
     .textField__wrapper {
@@ -55,6 +52,10 @@ function style() {
 
     .textField:focus {
       outline: 0;
+    }
+
+    .textField::placeholder {
+      color: grey;
     }
 
     .textField__alert {
