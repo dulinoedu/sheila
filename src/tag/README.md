@@ -1,23 +1,22 @@
-# Web Component: `<lxp-button>`
+# Web Component: `<lxp-tag>`
 
 ## Visão Geral
-`<lxp-button>` é um custom element utilizado para criar botões interativos no DOM com suporte a diferentes variantes, tamanhos e tipos. Ele oferece funcionalidades avançadas de formulário, como envio e reset automáticos, além de disparar eventos personalizados ao ser clicado.
+`<lxp-tag>` é um custom element utilizado para criar tags interativas no DOM, com suporte a seleção, desabilitação e personalização de valor. Ele oferece funcionalidades para seleção de tags, além de disparar eventos personalizados ao ser clicado.
 
 ---
 
 ## Como Usar
 
-Basta incluir a tag `<lxp-button>` no HTML da sua aplicação:
+Basta incluir a tag `<lxp-tag>` no HTML da sua aplicação:
 
 ```html
-<lxp-button size="large" type="submit" variant="secondary-outline"></lxp-button>
-```
+<lxp-tag value="example">Tag Label</lxp-tag>
 
 Ou via JavaScript:
 
 ```javascript
-const button = document.createElement('lxp-button');
-document.body.appendChild(button);
+const tag = document.createElement('lxp-tag');
+document.body.appendChild(tag);
 ```
 
 ---
@@ -27,7 +26,7 @@ document.body.appendChild(button);
 Aqui estão os atributos públicos que podem ser definidos no componente:
 
 ### `disabled`
-- **Descrição**: Desabilita o botão, prevenindo interações.  
+- **Descrição**: Desabilita a tag, prevenindo interações. 
 - **Tipo**: `Boolean`  
 - **Valor Padrão**: `false`  
 - **Evento disparado**: `disabledChanged` (disparado sempre que o valor do atributo for alterado).
@@ -35,62 +34,20 @@ Aqui estão os atributos públicos que podem ser definidos no componente:
 **Exemplo de uso:**
 
 ```html
-<lxp-button disabled></lxp-button>
-```
-
----
-
-### `size`
-- **Descrição**: Define o tamanho do botão. Pode ser `small`, `medium`, ou `large`.  
-- **Tipo**: `String`  
-- **Valor Padrão**: `"medium"`  
-- **Evento disparado**: `sizeChanged`
-
-**Exemplo de uso:**
-
-```html
-<lxp-button size="large"></lxp-button>
-```
-
----
-
-### `type`
-- **Descrição**: Define o tipo de ação do botão. Pode ser `submit`, `reset`, ou `button`.  
-- **Tipo**: `String`  
-- **Valor Padrão**: `"submit"`  
-- **Evento disparado**: `typeChanged`
-
-**Exemplo de uso:**
-
-```html
-<lxp-button type="reset"></lxp-button>
+<lxp-tag disabled>Tag Label</lxp-tag>
 ```
 
 ---
 
 ### `value`
-- **Descrição**: Define o valor associado ao botão.  
+- **Descrição**: Define o valor associado à tag.  
 - **Tipo**: `String`  
 - **Evento disparado**: `valueChanged`
 
 **Exemplo de uso:**
 
 ```html
-<lxp-button value="send"></lxp-button>
-```
-
----
-
-### `variant`
-- **Descrição**: Define o estilo visual do botão. Pode ser `primary-solid`, `secondary-outline`, etc.  
-- **Tipo**: `String`  
-- **Valor Padrão**: `"primary-solid"`  
-- **Evento disparado**: `variantChanged`
-
-**Exemplo de uso:**
-
-```html
-<lxp-button variant="secondary-outline"></lxp-button>
+<lxp-tag value="my-value">Tag Label</lxp-tag>
 ```
 
 ---
@@ -100,15 +57,15 @@ Aqui estão os atributos públicos que podem ser definidos no componente:
 Os métodos a seguir podem ser invocados diretamente via JavaScript:
 
 ### `click()`
-- **Descrição**: Dispara o evento de clique no botão, respeitando as regras de interação (como desabilitado).  
+- **Descrição**: Dispara o evento de clique na tag, respeitando as regras de interação (como desabilitado). 
 - **Parâmetros**: Nenhum.  
-- **Evento disparado**: `clicked` (disparado quando o botão é clicado).
+- **Evento disparado**: `clicked` (disparado quando o tag é clicada).
 
 **Exemplo de uso:**
 
 ```javascript
-const button = document.querySelector('lxp-button');
-button.click();
+const tag = document.querySelector('lxp-tag');
+tag.click();
 ```
 
 ---
@@ -116,22 +73,20 @@ button.click();
 ## Exemplo Completo
 
 ```html
-<lxp-button size="large" type="submit" variant="primary-solid" value="send"></lxp-button>
+<lxp-tag value="my-tag" disabled>Tag Label</lxp-tag>
 
 <script>
-  const button = document.querySelector('lxp-button');
+  const tag = document.querySelector('lxp-tag');
 
   // Alterando atributos via JavaScript
-  button.setAttribute('disabled', true);
-  button.size = 'small';
-  button.variant = 'secondary-outline';
+  tag.setAttribute('disabled', true);
+  tag.value = 'new-value';
 
   // Executando métodos
-  button.click();
-  button.dispatchFormAction();
+  tag.click();
 
   // Ouvindo eventos
-  button.addEventListener('clicked', () => console.log('Botão foi clicado!'));
-  button.addEventListener('disabledChanged', () => console.log('Atributo disabled alterado!'));
+  tag.addEventListener('clicked', () => console.log('Tag foi clicada!'));
+  tag.addEventListener('disabledChanged', () => console.log('Atributo disabled alterado!'));
 </script>
 ```
