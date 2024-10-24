@@ -1,61 +1,182 @@
-# Textfield Web Component
+# Web Component: `<lxp-text-field>`
 
-`<lxp-text-field>` é um componente web customizado que representa um campo de texto altamente configurável e funcional, compatível com diferentes tipos de input e com atributos personalizados para controle e validação. Ele pode ser utilizado em diversas situações de formulários, oferecendo suporte a atributos como `disabled`, `hidden`, `label`, `max`, `min`, `required`, entre outros.
+## Visão Geral
+`<lxp-text-field>` é um custom element utilizado para criar um campo de texto que se integra facilmente em formulários HTML. Ele oferece atributos e métodos customizados para interações avançadas no DOM, permitindo controle completo sobre suas propriedades e validações.
 
-# Uso
-Você  pode  incluir  o  componente  em  seu  HTML  da  seguinte  forma:
-```<lxp-text-field></lxp-text-field>```
+---
 
-### Atributos  Suportados
-#### O  componente  lxp-text-field  suporta  vários  atributos  para  personalização:
-- `disabled`:  Desabilita  o  campo.
-- `hidden`:  Oculta  o  campo.
-- `label`:  Define  o  texto  do  rótulo  do  campo.
-- `id`:  Define  o  id  do  campo  e  associa  ao  rótulo.
-- `inputmode`:  Define  o  modo  de  entrada  para  o  - `campo` (útil para  inputs  em  dispositivos  móveis).
-- `max`:  Define  o  valor  máximo  permitido (para campos  numéricos  ou  de  data).
-- `maxlength`:  Define  o  número  máximo  de  caracteres  permitidos.
-- `min`:  Define  o  valor  mínimo  permitido (para campos  numéricos  ou  de  data).
-- `minlength`:  Define  o  número  mínimo  de  caracteres  permitidos.
-- `name`:  Define  o  nome  do  campo,  útil  em  formulários.
-- `pattern`:  Define  um  padrão  de  expressão  regular  para  validação.
-- `placeholder`:  Texto  de  dica  para  o  campo.
-- `readonly`:  Define  o  campo  como  apenas  leitura.
-- `required`:  Torna  o  campo  obrigatório.
-- `step`:  Define  os  intervalos  de  valores  permitidos (útil para  campos  numéricos  ou  de  data).
-- `type`:  Define  o  tipo  do  campo (text, number,  email,  password,  etc).
-- `value`:  Define  o  valor  inicial  do  campo.
+## Como Usar
 
-### Exemplo de uso 1: 
-#### _Campo  de  Texto  Básico_
-```<lxp-text-field label="Nome"  id="nome"  placeholder="Digite seu nome"></lxp-text-field>```
-### Exemplo de uso 2:
-#### _Campo  de  Texto  com  Validação  de  Padrão_
-```<lxp-text-field label="Email"  id="email"  type="email"  required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"  placeholder="Digite seu email"></lxp-text-field>```
-### Exemplo de uso 3:
-#### _Campo  Numérico  com  Valores  Máximo  e  Mínimo_
-```<lxp-text-field label="Idade"  id="idade"  type="number"  min="18"  max="99"  step="1"  placeholder="Digite sua idade"></lxp-text-field>```
+Basta incluir a tag `<lxp-text-field>` no HTML da sua aplicação:
 
-### Métodos Disponíveis
-#### _O  componente  também  oferece  alguns  métodos  úteis  para  validação  de  formulários:_
-- `checkValidity()`: Verifica se o campo é válido com base nas suas regras de validação.
+```html
+<lxp-text-field label="Seu nome" name="username"></lxp-text-field>
+```
 
--  `reportValidity()`: Exibe a mensagem de validação, se houver, e retorna true ou false.
+Ou via JavaScript:
 
--  `reset()`: Reseta o valor do  campo  para  o  estado  inicial.
+```javascript
+const textField = document.createElement('lxp-text-field');
+document.body.appendChild(textField);
+```
 
+---
 
+## Atributos
 
-### Eventos  Customizados
-#### _O  lxp-text-field  despacha  eventos  customizados  em  certas  interações.  Estes  são  alguns  dos  eventos  que  você  pode  ouvir:_
-- `redisabed`: Verifica se o campo é válido com base nas suas regras de validação.
+Aqui estão os atributos públicos que podem ser definidos no componente:
 
--  `hiddened`: Exibe a mensagem de validação, se houver, e retorna true ou false.
+### `disabled`
+- **Descrição**: Define se o campo de texto está desativado.  
+- **Tipo**: `Boolean`  
+- **Valor Padrão**: `false`  
+- **Evento disparado**: `redisabed` (disparado sempre que o valor do atributo for alterado).  
 
--  `relabelled`: Reseta o valor do  campo  para  o  estado  inicial.
+**Exemplo de uso:**
 
--  `changed`: Reseta o valor do  campo  para  o  estado  inicial.
+```html
+<lxp-text-field disabled></lxp-text-field>
+```
 
--  `invalidated`: Reseta o valor do  campo  para  o  estado  inicial.
+---
 
--  `reseted`: Reseta o valor do  campo  para  o  estado  inicial.
+### `hidden`
+- **Descrição**: Define se o campo de texto está oculto.  
+- **Tipo**: `Boolean`  
+- **Valor Padrão**: `false`  
+- **Evento disparado**: `hiddened`  
+
+**Exemplo de uso:**
+
+```html
+<lxp-text-field hidden></lxp-text-field>
+```
+
+---
+
+### `id`
+- **Descrição**: Define o ID do campo de texto, que também é atribuído ao seu rótulo associado.  
+- **Tipo**: `String`  
+- **Valor Padrão**: `""`  
+- **Evento disparado**: `reidentified`  
+
+**Exemplo de uso:**
+
+```html
+<lxp-text-field id="username" label="Username"></lxp-text-field>
+```
+
+---
+
+### `label`
+- **Descrição**: Define o texto do rótulo do campo de texto.  
+- **Tipo**: `String`  
+- **Valor Padrão**: `""`  
+- **Evento disparado**: `relabelled`  
+
+**Exemplo de uso:**
+
+```html
+<lxp-text-field label="Seu nome"></lxp-text-field>
+```
+
+---
+
+### `max`
+- **Descrição**: Define o valor máximo aceito para o campo.  
+- **Tipo**: `String`  
+- **Valor Padrão**: `""`  
+- **Evento disparado**: `maximised`  
+
+**Exemplo de uso:**
+
+```html
+<lxp-text-field max="100"></lxp-text-field>
+```
+
+---
+
+### `value`
+- **Descrição**: Define o valor atual do campo de texto.  
+- **Tipo**: `String`  
+- **Valor Padrão**: `""`  
+- **Evento disparado**: `changed`  
+
+**Exemplo de uso:**
+
+```html
+<lxp-text-field value="Texto inicial"></lxp-text-field>
+```
+
+---
+
+## Métodos
+
+Os métodos a seguir podem ser invocados diretamente via JavaScript:
+
+### `checkValidity()`
+- **Descrição**: Verifica se o campo de texto é válido de acordo com suas regras de validação.  
+- **Parâmetros**: Nenhum.  
+- **Retorno**: `Boolean` – Retorna `true` se o campo for válido, `false` caso contrário.  
+
+**Exemplo de uso:**
+
+```javascript
+const textField = document.querySelector('lxp-text-field');
+const isValid = textField.checkValidity();
+```
+
+---
+
+### `reportValidity()`
+- **Descrição**: Exibe mensagens de erro de validação para o usuário, se o campo não for válido.  
+- **Parâmetros**: Nenhum.  
+- **Retorno**: `Boolean` – Retorna `true` se o campo for válido, `false` caso contrário.  
+
+**Exemplo de uso:**
+
+```javascript
+const textField = document.querySelector('lxp-text-field');
+textField.reportValidity();
+```
+
+---
+
+### `reset()`
+- **Descrição**: Redefine o valor do campo de texto para uma string vazia e limpa estados de validação.  
+- **Parâmetros**: Nenhum.  
+- **Evento disparado**: `reseted`  
+
+**Exemplo de uso:**
+
+```javascript
+const textField = document.querySelector('lxp-text-field');
+textField.reset();
+```
+
+---
+
+## Exemplo Completo
+
+```html
+<lxp-text-field label="Seu nome" name="username"></lxp-text-field>
+
+<script>
+  const textField = document.querySelector('lxp-text-field');
+
+  // Alterando atributos via JavaScript
+  textField.setAttribute('disabled', true);
+  textField.setAttribute('value', 'Nome exemplo');
+
+  // Verificando validade
+  if (!textField.checkValidity()) {
+    textField.reportValidity();
+  }
+
+  // Resetando o campo
+  textField.reset();
+
+  // Ouvindo eventos
+  textField.addEventListener('changed', () => console.log('O valor do campo foi alterado!'));
+</script>
+```
