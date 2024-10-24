@@ -23,10 +23,6 @@ function style() {
       align-items: center;
       gap: 15px;
     }
-
-    educash {
-      color: #3481B2;
-    }
   `;
 }
 
