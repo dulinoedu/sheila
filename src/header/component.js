@@ -3,13 +3,15 @@ import { html } from "@bake-js/-o-id/dom";
 function component(self) {
   return html`
     <header>
-      <slot name="logo"></slot>
-      <nav>
-        <a selected href=${`//harvey.sistemadulino.com.br/app/${self.user}/${self.school}/dashboard`}>Painel Inicial</a>
-        <div></div>
-        <a href=${`//harvey.sistemadulino.com.br/app/${self.user}/${self.school}/performance`}>Desempenho</a>
-      </nav>
-      <slot name="avatar"></slot>
+      <leading>
+        <slot name="leading"></slot>
+      </leading>
+      <headline>
+        <slot name="headline"></slot>
+      </headline>
+      <trailing>
+        <slot name="trailing"></slot>
+      </trailing>
     </header>
   `;
 }
