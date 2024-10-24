@@ -8,5 +8,17 @@ export default defineConfig({
       name: "chrome",
       provider: "webdriverio",
     },
+    coverage: {
+      include: ["src/**/*.{js,ts}"],
+      exclude: ["**/*.test.{js,ts}", "**/index.{js,ts}"],
+      provider: "istanbul",
+      reporter: ["lcov", "html"],
+      thresholds: {
+        statements: 0,
+        branches: 0,
+        functions: 0,
+        lines: 0,
+      },
+    },
   },
 });
