@@ -6,12 +6,40 @@
   <title>Icon</title>
 </head>
 <body>
-  <main style="display: flex; flex-direction: column; gap: 20px;">
+  <main style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
     <a href="../../index.html">Voltar</a>
     <lxp-text-field label="Nome" id="nome" placeholder="Digite seu nome"></lxp-text-field>
     <lxp-text-field label="Email" id="email" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Digite seu email"></lxp-text-field>
     <lxp-text-field label="Idade" id="idade" type="number" min="18" max="99" step="1" placeholder="Digite sua idade"></lxp-text-field>
+
+    <lxp-button variant="primary-solid" size="small" id="checkValidity">Verify</lxp-button>
+    <lxp-button variant="secondary-solid" size="small" id="resetFields" id="resetFields">Reset</lxp-button>
+    <lxp-button variant="primary-solid" size="small" id="submit">Submit</lxp-button>
   </main>
   <script type="module" src="../../src/index.js"></script>
+  <script>
+
+    // Verifica se o valor inserido no campo é válido
+    document.getElementById('checkValidity').addEventListener('click', () => {
+      console.log('Nome válido:', document.getElementById('nome').checkValidity());
+      console.log('Email válido:', document.getElementById('email').checkValidity());
+      console.log('Idade válida:', document.getElementById('idade').checkValidity());
+    });
+
+    // Resetar campos
+    document.getElementById('resetFields').addEventListener('click', () => {
+      document.getElementById('nome').reset();
+      document.getElementById('email').reset();
+      document.getElementById('idade').reset();
+    });
+
+    // Ouvir o evento de click do botão de submit
+    document.getElementById('submit').addEventListener('click', () => {
+      console.log('Nome:', document.getElementById('nome').value);
+      console.log('Email:', document.getElementById('email').value);
+      console.log('Idade:', document.getElementById('idade').value);
+    });
+
+  </script>
 </body>
 </html>
