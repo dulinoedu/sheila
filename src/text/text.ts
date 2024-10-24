@@ -16,7 +16,7 @@ class Text extends Echo(HTMLElement) {
   #weight;
 
   get color() {
-    return (this.#color ??= "");
+    return (this.#color ??= "")
   }
 
   @attributeChanged("color")
