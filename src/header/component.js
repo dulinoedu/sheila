@@ -10,6 +10,7 @@ function component(self) {
         <slot name="headline"></slot>
       </headline>
       <trailing>
+        <slot name="educash"></slot>
         <slot name="trailing"></slot>
       </trailing>
     </header>

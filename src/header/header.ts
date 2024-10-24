@@ -10,71 +10,9 @@ import style from "./style";
 @define("lxp-header")
 @paint(component, style)
 class Header extends Echo(HTMLElement) {
-  #selected;
-  #user;
-  #school;
-  #value;
-
-  get selected() {
-    return (this.#selected ??= false);
-  }
-
-  @attributeChanged("selected", booleanAttribute)
-  @dispatchEvent("selectedChanged")
-  @repaint
-  set selected(value) {
-    this.#selected = value;
-  }
-
-  get value() {
-    return this.#value;
-  }
-
-  @attributeChanged("value")
-  @dispatchEvent("valueChanged")
-  set value(value) {
-    this.#value = value;
-  }
-
-  get user() {
-    return (this.#user ??= "");
-  }
-
-  @attributeChanged("user")
-  @dispatchEvent("userChanged")
-  @repaint
-  set user(value) {
-    this.#user = value;
-  }
-
-  get school() {
-    return (this.#school ??= "");
-  }
-
-  @attributeChanged("school")
-  @dispatchEvent("schoolChanged")
-  @repaint
-  set school(value) {
-    this.#school = value;
-  }
-
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-  }
-
-  @on.click("a")
-  click(e) {
-    const links = this.shadowRoot.querySelectorAll("a");
-    links.forEach((link) => {
-      link.removeAttribute("selected");
-    });
-
-    e.target.setAttribute("selected", true);
-    const init = { bubbles: true, cancelable: true, detail: this.value };
-    const event = new CustomEvent("clicked", init);
-    this.dispatchEvent(event);
-    return this;
   }
 }
 
