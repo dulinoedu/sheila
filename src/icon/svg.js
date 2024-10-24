@@ -152,6 +152,16 @@ const svg = {
       <path d="M12.3633 9.85941L7.6459 9.858" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `,
+
+  educash: () => `
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M13.6001 5H11.2002V7H13.6001V5Z" fill="currentcolor"/>
+      <path d="M16 9.66667V7.66667H8V14.4C8 15.4667 9.04004 16.3333 10.3198 16.3333H16V14.3333H10.3999V9.66667H16Z" fill="currentcolor"/>
+      <path d="M11.2002 11H15.2002V13H11.2002V11Z" fill="currentcolor"/>
+      <path d="M11.2002 17H13.6001V19H11.2002V17Z" fill="currentcolor"/>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12C24 18.6274 18.6274 24 12 24C5.37256 24 0 18.6274 0 12C0 5.37258 5.37256 0 12 0C18.6274 0 24 5.37258 24 12ZM22 12C22 17.5228 17.5229 22 12 22C6.47705 22 2 17.5228 2 12C2 6.47715 6.47705 2 12 2C17.5229 2 22 6.47715 22 12Z" fill="currentcolor"/>
+    </svg>
+  `,
 };
 
 export default svg;

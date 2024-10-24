@@ -12,29 +12,16 @@ function style() {
       padding: var(--spacing_inset-xs);
     }
 
-    nav {
-      align-items: center;
+    headline slot {
       display: flex;
-      gap: 32px; 
-    }
-    
-    a {
-      color: var(--color-grey-400);
+      gap: 20px;
       cursor: pointer;
-      font-size: var(--font-size-md);
-      font-weight: var(--font-weight-medium);
-      font-family: var(--font-family-base);
-      text-decoration: none;
     }
 
-    div {
-      background-color: var(--color-grey-200);
-      height: 30px;
-      width: 2px;
-    }
-
-    a[selected] {
-      color: var(--color-grey-700);
+    trailing {
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
   `;
 }
