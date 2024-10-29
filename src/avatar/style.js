@@ -3,12 +3,12 @@ import { css } from "@bake-js/-o-id/dom";
 function style(self) {
   return css`
     :host {
-      --font-size-small: var(--font-size-md);
       --font-size-large: var(--font-size-display-xs);
-      --line-height-small: var(--line-height-md);
+      --font-size-small: var(--font-size-md);
       --line-height-large: var(--line-height-display-xs);
-      --size-small: 48px;
+      --line-height-small: var(--line-height-md);
       --size-large: 72px;
+      --size-small: 48px;
       display: block;
       height: var(--size-${self.size}, var(--size-small));
       position: relative;
@@ -18,6 +18,7 @@ function style(self) {
     img {
       aspect-ratio: 1 / 1;
       border-radius: 50%;
+      border: 3px solid rgb(49, 129, 178);
       box-sizing: border-box;
       height: var(--size-${self.size}, var(--size-small));
       left: 0;
@@ -33,7 +34,6 @@ function style(self) {
       align-items: center;
       background: linear-gradient(to right, #00B0AD, #00E675);
       border-radius: 50%;
-      border: 3px solid rgb(49, 129, 178);
       box-sizing: border-box;
       color: var(--color-neutral-white);
       display: flex;

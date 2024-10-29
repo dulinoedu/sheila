@@ -1,7 +1,15 @@
 import { css } from "@bake-js/-o-id/dom";
 
-function style() {
+function style(self) {
   return css`
+    :host {
+      --background-color-gradient-effect: radial-gradient(circle at top, rgba(2, 111, 198, 1) -60%, rgba(1, 54, 96, 1)) 60%;
+      --background-color-transparent: transparent;
+    }
+
+    header[oncolor] {
+    }
+
     header {
       align-items: center;
       display: flex;
@@ -10,6 +18,7 @@ function style() {
       margin: 0 auto;
       max-width: 1440px;
       padding: var(--spacing_inset-xs);
+      background-color: var(--background-color-${self.variant});
     }
 
     headline slot {
