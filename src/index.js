@@ -1,6 +1,7 @@
 import "./tokens/index.css";
 import "./button";
 import "./icon";
+import "./textfield";
 import "./checkbox";
 import "./logo";
 import "./menu";

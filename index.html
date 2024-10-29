@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <main style="display: flex; flex-direction: column; gap: 10px;">
+  <main style="display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center;">
     <a href="./src/avatar/example.html">Avatar</a>
     <a href="./src/button/example.html">Button</a>
     <a href="./src/checkbox/example.html">Checkbox</a>
@@ -20,7 +20,26 @@
     <a href="./src/menuItem/example.html">Menu Item</a>
     <a href="./src/text/example.html">Text</a>
     <a href="./src/tag/example.html">Tag</a>
+    <a href="./src/textfield/example.html">Textfield</a>
   </main>
+
+  <style>
+    a {
+      background-color: rgba(197, 193, 193, 0.507);
+      border-radius: 9px;
+      color: black;
+      display: flex;
+      font-family: 'maven pro';
+      justify-content: center;
+      padding: 10px;
+      text-decoration: none;
+      width: 25%;
+
+      &:hover {
+        background-color: rgba(155, 152, 152, 0.507);
+      }
+    }
+  </style>
   <script type="module" src="./src/index.js"></script>
 </body>
 

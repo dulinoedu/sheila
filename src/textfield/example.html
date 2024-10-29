@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon</title>
+</head>
+<body>
+  <main>
+    <a href="../../index.html">Voltar.</a>
+    <form style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+      <lxp-text-field label="Nome" name="nome" placeholder="Digite seu nome"></lxp-text-field>
+      <lxp-text-field label="Email" name="email" type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Digite seu email"></lxp-text-field>
+      <lxp-text-field label="Idade" name="idade" type="number" min="18" max="99" step="1" placeholder="Digite sua idade"></lxp-text-field>
+  
+      <lxp-button variant="secondary-solid" size="small" type="reset">Reset</lxp-button>
+      <lxp-button variant="primary-solid" size="small" type="submit">Submit</lxp-button>
+    </form>
+  </main>
+
+  <script type="module" src="../../src/index.js"></script>
+  <script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault()
+
+      console.log(Object.fromEntries(new FormData(event.target)));
+    })
+  </script>
+</body>
+</html>
