@@ -11,10 +11,15 @@
 <body>
   <main style="display: flex; flex-direction: column; gap: 20px;">
     <a href="../../index.html">Voltar</a>
-    <div>
+    <div style="display: flex; flex-direction: column; gap: 20px;">
       <lxp-header>
         <lxp-logo slot="leading" src="//donna.sistemadulino.com.br/dulino_azul.svg" alt="Dulino"></lxp-logo>
         <lxp-avatar slot="trailing" src="" alt="Zezim Dev"></lxp-avatar>
+      </lxp-header>
+      <lxp-header variant="gradient-effect">
+        <lxp-button slot="leading" variant="secondary-ghost" size="small">
+          <lxp-icon use="trash"></lxp-icon>
+        </lxp-button>
       </lxp-header>
     </div>
   </main>
