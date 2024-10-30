@@ -57,7 +57,7 @@ function style(self) {
 
       --line-height-large: var(--line-height-display-xs);
       --line-height-medium: var(--line-height-xl);
-      --line-height-small: var(--line-height-lg);
+      --line-height-small: var(--line-height-xs);
 
       --padding-large: 16px 22px;
       --padding-medium: 12px 20px;
