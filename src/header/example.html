@@ -17,8 +17,9 @@
         <lxp-avatar slot="trailing" src="" alt="Zezim Dev"></lxp-avatar>
       </lxp-header>
       <lxp-header variant="gradient-effect">
-        <lxp-button slot="leading" variant="secondary-ghost" size="small">
-          <lxp-icon use="arrowright"></lxp-icon>
+        <lxp-button slot="leading" variant="primary-ghost" size="small" id="backdashboard">
+          <lxp-icon use="trash"></lxp-icon>
+          <lxp-redirect href="../checkbox/example.html" on="backdashboard/clicked:method/go"></lxp-redirect>
         </lxp-button>
       </lxp-header>
     </div>

@@ -21,7 +21,6 @@ function style(self) {
       height: 120px;
       justify-content: space-between;
       max-width: 1440px;
-      padding: var(--spacing_inset-xs);
       width: 100%;
     }
 
