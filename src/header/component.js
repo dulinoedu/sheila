@@ -1,6 +1,6 @@
 import { html } from "@bake-js/-o-id/dom";
 
-function component(self) {
+function component() {
   return html`
     <header>
       <container>
