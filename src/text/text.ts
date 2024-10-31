@@ -1,9 +1,9 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
 import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
 import Echo from "@bake-js/-o-id/echo";
+import on from "@bake-js/-o-id/event";
 import booleanAttribute from "../booleanAttribute";
 import dispatchEvent from "../dispatchEvent";
-import joinCut from "../joinCut";
 import component from "./component";
 import style from "./style";
 
@@ -14,6 +14,7 @@ class Text extends Echo(HTMLElement) {
   #color;
   #size;
   #weight;
+  #value;
 
   get color() {
     return (this.#color ??= "");
@@ -61,9 +62,27 @@ class Text extends Echo(HTMLElement) {
     this.#weight = value;
   }
 
+  get value() {
+    return this.#value;
+  }
+
+  @attributeChanged("value")
+  @dispatchEvent("valueChanged")
+  set value(value) {
+    this.#value = value;
+  }
+
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+  }
+
+  @on.click("*")
+  click() {
+    const init = { bubbles: true, cancelable: true, detail: this.value };
+    const event = new CustomEvent("clicked", init);
+    this.dispatchEvent(event);
+    return this;
   }
 }
 
