@@ -15,6 +15,7 @@ class Text extends Echo(HTMLElement) {
   #size;
   #weight;
   #value;
+  #align;
 
   get color() {
     return (this.#color ??= "");
@@ -70,6 +71,16 @@ class Text extends Echo(HTMLElement) {
   @dispatchEvent("valueChanged")
   set value(value) {
     this.#value = value;
+  }
+
+  get align() {
+    return (this.#align ??= "none");
+  }
+
+  @attributeChanged("align")
+  @dispatchEvent("alignChanged")
+  set align(value) {
+    this.#align = value;
   }
 
   constructor() {
