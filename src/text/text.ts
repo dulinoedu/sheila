@@ -74,7 +74,7 @@ class Text extends Echo(HTMLElement) {
   }
 
   get align() {
-    return this.#align;
+    return (this.#align ??= "none");
   }
 
   @attributeChanged("align")
