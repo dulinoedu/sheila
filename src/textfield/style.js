@@ -1,6 +1,6 @@
 import { css } from "@bake-js/-o-id/dom";
 
-function style() {
+function style(self) {
   return css`
     *,
     *::after,
@@ -17,7 +17,7 @@ function style() {
       flex-direction: column;
       gap: 8px;
       position: relative;
-      width: var(--width-xxs);
+      width: ${self.width};
     }
 
     .textField__label {
