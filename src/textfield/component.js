@@ -10,7 +10,7 @@ function component(self) {
       >
           ${self.label}
       </label>
-      <div class="textField__wrapper">
+      <div class="textField__wrapper" width="${self.width}">
         <input
           class="textField"
           ${self.id ? `id="${self.id}"` : ""}
