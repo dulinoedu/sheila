@@ -34,6 +34,7 @@ class Textfield extends Echo(HTMLElement) {
   #input;
   #internals;
   #label;
+  #width;
 
   get disabled() {
     return this.#input.disabled;
@@ -89,6 +90,16 @@ class Textfield extends Echo(HTMLElement) {
   @dispatchEvent("relabelled")
   set label(value) {
     this.#label.innerText = value;
+  }
+
+  get width() {
+    return (this.#width ??= "100%");
+  }
+
+  @attributeChanged("width")
+  @dispatchEvent("width")
+  set width(value) {
+    this.#width = value;
   }
 
   get max() {
