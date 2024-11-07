@@ -1,6 +1,6 @@
 import { css } from "@bake-js/-o-id/dom";
 
-function style() {
+function style(self) {
   return css`
     *,
     *::after,
@@ -17,12 +17,14 @@ function style() {
       flex-direction: column;
       gap: 8px;
       position: relative;
-      width: var(--width-xxs);
+      width: ${self.width};
     }
 
     .textField__label {
-      color: black;
+      color: #6A6A6A;
+      font-weight: 500;
       font-family: 'maven pro';
+      line-height: 19.2px;
     }
 
     .textField__wrapper {
@@ -32,11 +34,13 @@ function style() {
 
     .textField {
       appearance: none;
-      border: 1px solid grey;
+      border: 1px solid #E1E1E1;
       border-radius: 9px;
-      color: grey;
+      color: var(--color-grey-600);
       font-family: 'maven pro';
       height: 44px;
+      font-size: 16px;
+      line-height: 24px;
       padding: 14px 16px;
       width: 100%;
     }
