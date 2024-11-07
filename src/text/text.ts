@@ -22,8 +22,8 @@ class Text extends Echo(HTMLElement) {
     return (this.#alignself ??= "none");
   }
 
-  @attributeChanged("align")
-  @dispatchEvent("alignChanged")
+  @attributeChanged("alignself")
+  @dispatchEvent("alignselfChanged")
   set alignself(value) {
     this.#alignself = value;
   }
@@ -88,10 +88,10 @@ class Text extends Echo(HTMLElement) {
     return (this.#textalign ??= "none");
   }
 
-  @attributeChanged("align")
-  @dispatchEvent("alignChanged")
-  set align(value) {
-    this.#align = value;
+  @attributeChanged("textalign")
+  @dispatchEvent("textalignChanged")
+  set textalign(value) {
+    this.#textalign = value;
   }
 
   constructor() {
