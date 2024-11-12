@@ -6,7 +6,7 @@ function component(self) {
       src="${self.src}"
       alt="${self.alt}" 
       loading="${self.loading}"
-      onerror="this.src='${self.srcfallback}';return void"
+      onerror="this.onerror=null;this.src='${self.srcfallback}';"
     />
   `;
 }
