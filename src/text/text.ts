@@ -19,7 +19,7 @@ class Text extends Echo(HTMLElement) {
   #alignself;
 
   get alignself() {
-    return (this.#alignself ??= "none");
+    return (this.#alignself ??= "start");
   }
 
   @attributeChanged("alignself")
@@ -85,7 +85,7 @@ class Text extends Echo(HTMLElement) {
   }
 
   get textalign() {
-    return (this.#textalign ??= "none");
+    return (this.#textalign ??= "start");
   }
 
   @attributeChanged("textalign")

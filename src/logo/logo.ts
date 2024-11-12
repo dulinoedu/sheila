@@ -12,6 +12,18 @@ class Logo extends Echo(HTMLElement) {
   #alt;
   #loading;
   #src;
+  #srcfallback;
+
+  get srcfallback() {
+    return (this.#srcfallback ??= "");
+  }
+
+  @attributeChanged("src-fallback")
+  @dispatchEvent("srcfallbackChanged")
+  @repaint
+  set srcfallback(value) {
+    this.#srcfallback = value;
+  }
 
   get alt() {
     return (this.#alt ??= "");

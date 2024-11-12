@@ -5,7 +5,8 @@ function component(self) {
     <img 
       src="${self.src}"
       alt="${self.alt}" 
-      loading="${self.loading}" 
+      loading="${self.loading}"
+      onerror="this.src='${self.srcfallback}';return void"
     />
   `;
 }
