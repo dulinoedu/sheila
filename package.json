@@ -47,5 +47,5 @@
   "styles": "dist/style.css",
   "type": "module",
   "types": "types.d.ts",
-  "version": "0.3.5"
+  "version": "0.3.6"
 }
