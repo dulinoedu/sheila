@@ -7,6 +7,11 @@ function style(self) {
       height: 40px;
       width: auto;
     }
+
+    img[pointer="true"] {
+      cursor: pointer;
+    }
+
   `;
 }
 

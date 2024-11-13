@@ -13,17 +13,7 @@ class Logo extends Echo(HTMLElement) {
   #loading;
   #src;
   #srcfallback;
-
-  get srcfallback() {
-    return (this.#srcfallback ??= "");
-  }
-
-  @attributeChanged("src-fallback")
-  @dispatchEvent("srcfallbackChanged")
-  @repaint
-  set srcfallback(value) {
-    this.#srcfallback = value;
-  }
+  #pointer;
 
   get alt() {
     return (this.#alt ??= "");
@@ -36,6 +26,17 @@ class Logo extends Echo(HTMLElement) {
     this.#alt = value;
   }
 
+  get srcfallback() {
+    return (this.#srcfallback ??= "");
+  }
+
+  @attributeChanged("src-fallback")
+  @dispatchEvent("srcfallbackChanged")
+  @repaint
+  set srcfallback(value) {
+    this.#srcfallback = value;
+  }
+
   get loading() {
     return (this.#loading ??= "eager");
   }
@@ -45,6 +46,17 @@ class Logo extends Echo(HTMLElement) {
   @repaint
   set loading(value) {
     this.#loading = value;
+  }
+
+  get pointer() {
+    return (this.#pointer ??= "");
+  }
+
+  @attributeChanged("pointer")
+  @dispatchEvent("pointerChanged")
+  @repaint
+  set pointer(value) {
+    this.#pointer = value;
   }
 
   get src() {

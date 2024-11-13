@@ -7,6 +7,7 @@ function component(self) {
       alt="${self.alt}" 
       loading="${self.loading}"
       onerror="this.onerror=null;this.src='${self.srcfallback}';"
+      pointer="${self.pointer}"
     />
   `;
 }
