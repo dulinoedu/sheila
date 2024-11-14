@@ -70,6 +70,7 @@ function style(self) {
       --transform-secondary-solid: translateY(12px);
       --transform-secondary-ghost: translateY(12px);
       --transform-secondary-link: none;
+      box-sizing: border-box;
     }
 
     button {
@@ -86,7 +87,6 @@ function style(self) {
       font-weight: var(--font-weight-bold);
       gap: 4px;
       justify-content: center;
-      line-height: var(--line-height-${self.size});
       padding: var(--padding-${self.size});
       box-sizing: border-box;
     }

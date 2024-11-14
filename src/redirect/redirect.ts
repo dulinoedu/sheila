@@ -16,7 +16,11 @@ class Redirect extends Echo(HTMLElement) {
     this.#href = value;
   }
 
-  // @dispatchEvent("was")
+  constructor() {
+    super();
+    this.style.setProperty("display", "none");
+  }
+
   go() {
     location.assign(this.href);
     return this.href;

@@ -1,12 +1,14 @@
-import { paint, repaint } from "@bake-js/-o-id/dom";
-import component from "./component";
 import { attributeChanged, define } from "@bake-js/-o-id";
-import style from "./style";
+import { paint, repaint } from "@bake-js/-o-id/dom";
+import Echo from "@bake-js/-o-id/echo";
+import on from "@bake-js/-o-id/event";
 import dispatchEvent from "../dispatchEvent";
+import component from "./component";
+import style from "./style";
 
 @define("lxp-icon")
 @paint(component, style)
-class Icon extends HTMLElement {
+class Icon extends Echo(HTMLElement) {
   #use;
 
   get use() {
@@ -23,6 +25,14 @@ class Icon extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+  }
+
+  @on.click(":host *")
+  click() {
+    const event = new CustomEvent("clicked");
+    this.dispatchEvent(event);
+
+    return this;
   }
 }
 

@@ -5,6 +5,7 @@ function style() {
     :host {
       height: 24px;
       width: 24px;
+      box-sizing: border-box;
     }
   `;
 }

@@ -31,10 +31,13 @@
         <lxp-button variant="secondary-solid" size="small">15</lxp-button>
         <lxp-button variant="secondary-solid" size="small" disabled>16</lxp-button>
 
-        <lxp-button variant="secondary-ghost" size="large">17</lxp-button>
+        <lxp-button id="link" variant="secondary-ghost" size="large">
+          <lxp-icon use="trash"></lxp-icon>
+          <lxp-redirect href="../avatar/example.html" on="link/clicked:method/go"></lxp-redirect>
+        </lxp-button>
         <lxp-button variant="secondary-ghost" size="medium">18</lxp-button>
         <lxp-button variant="secondary-ghost" size="small">19</lxp-button>
-        <lxp-button variant="secondary-ghost" size="small" disabled>20</lxp-button>
+        <lxp-button variant="secondary-ghost" size="small" disabled>20</lxp-button> 
 
         <lxp-button variant="secondary-link" size="large">21</lxp-button>
         <lxp-button variant="secondary-link" size="medium">22</lxp-button>
