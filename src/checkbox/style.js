@@ -4,10 +4,13 @@ function style(self) {
   return css`
     div {
       align-items: center;
-      color: ${self.selected ? "#FB601D" : "#A6A6A6"};
       cursor: pointer;
       display: flex;
       gap: 4px;
+      
+      svg {
+        color: ${self.selected ? "#FB601D" : "#A6A6A6"};
+      }
 
       slot {
         color: var(--color-grey-600);
