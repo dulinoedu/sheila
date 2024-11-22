@@ -1,7 +1,7 @@
 import { attributeChanged, define } from "@bake-js/-o-id";
 import { paint, repaint, willPaint } from "@bake-js/-o-id/dom";
 import Echo from "@bake-js/-o-id/echo";
-import on from "@bake-js/-o-id/event";
+import on, { stop } from "@bake-js/-o-id/event";
 import booleanAttribute from "../booleanAttribute";
 import dispatchEvent from "../dispatchEvent";
 import joinCut from "../joinCut";
@@ -84,7 +84,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   @on.click(":host(:not(disabled)) *")
-  @on.clicked(":host(:not(disabled)) lxp-icon")
+  @on.clicked("lxp-icon", stop)
   @joinCut(dispatchFormAction)
   click() {
     const init = { bubbles: true, cancelable: true, detail: this.value };

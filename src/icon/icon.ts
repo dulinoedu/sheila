@@ -29,7 +29,8 @@ class Icon extends Echo(HTMLElement) {
 
   @on.click(":host *")
   click() {
-    const event = new CustomEvent("clicked");
+    const init = { bubbles: true, cancelable: true };
+    const event = new CustomEvent("clicked", init);
     this.dispatchEvent(event);
 
     return this;
