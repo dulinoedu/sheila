@@ -85,6 +85,7 @@ class Button extends Echo(HTMLElement) {
 
   @on.click(":host(:not(disabled)) *")
   @on.clicked("lxp-icon", stop)
+  @on.clicked("lxp-text", stop)
   @joinCut(dispatchFormAction)
   click() {
     const init = { bubbles: true, cancelable: true, detail: this.value };
