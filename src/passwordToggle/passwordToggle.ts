@@ -80,6 +80,11 @@ class PasswordToggle extends Echo(HTMLElement) {
 
     input.type = "password";
     this.#icon = "eyeson";
+
+    const init = { bubbles: true, cancelable: true };
+    const event = new CustomEvent("clicked", init);
+    this.dispatchEvent(event);
+    return this;
   }
 }
 
