@@ -67,8 +67,10 @@ const svg = {
 
   eyesoff: () => `
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 3L21 21M9.868 9.879C9.315 10.432 9 11.189 9 12C9 13.6569 10.3431 15 12 15C12.8107 15 13.568 14.684 14.121 14.132" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M10.218 6.158C10.806 6.054 11.4 6 12 6C15.727 6 18.863 8.238 20.486 11.508C19.972 12.566 19.257 13.487 18.389 14.218M17.446 17.446C16.197 18.35 14.655 19 13 19C9.273 19 6.137 16.762 4.514 13.492C4.999 12.478 5.683 11.53 6.514 10.782" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14.5582 14.3331C13.9186 15.4115 12.6764 15.979 11.4426 15.7565C10.2087 15.5339 9.24301 14.5682 9.02048 13.3344C8.79795 12.1005 9.36544 10.8583 10.4438 10.2188" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M17.9969 17.77C16.2721 19.0782 14.1651 19.7833 12.0003 19.7767C8.41322 19.8406 5.09886 17.8692 3.44275 14.6866C2.84786 13.4808 2.84786 12.0668 3.44275 10.861C4.271 9.21165 5.5913 7.86039 7.22105 6.99414" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20.4272 14.9085C20.4674 14.8324 20.5196 14.7642 20.5576 14.6867C21.1524 13.4809 21.1524 12.067 20.5576 10.8611C18.9015 7.67857 15.5871 5.70716 12 5.77104C11.7751 5.77104 11.5565 5.80105 11.3345 5.81568" stroke="#888888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21.0037 20.7786L3.99658 3.77148" stroke="currentcolor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
   `,
 
