@@ -9,6 +9,7 @@ import "./loading";
 import "./logo";
 import "./menu";
 import "./menuItem";
+import "./passwordToggle";
 import "./redirect";
 import "./tag";
 import "./text";
