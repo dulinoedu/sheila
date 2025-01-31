@@ -34,6 +34,7 @@ class Textfield extends Echo(HTMLElement) {
   #input;
   #internals;
   #label;
+  #placeholder;
   #width;
 
   get disabled() {
@@ -173,13 +174,13 @@ class Textfield extends Echo(HTMLElement) {
   }
 
   get placeholder() {
-    return this.#input.placeholder;
+    return (this.#placeholder ??= "");
   }
 
   @attributeChanged("placeholder")
-  @dispatchEvent("placeholdered")
+  @dispatchEvent("placeholderChanged")
   set placeholder(value) {
-    this.#input.placeholder = value;
+    this.#placeholder = value;
   }
 
   get readonly() {

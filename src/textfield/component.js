@@ -13,6 +13,7 @@ function component(self) {
       <div class="textField__wrapper" width="${self.width}">
         <input
           class="textField"
+          placeholder="${self.placeholder}"
           ${self.id ? `id="${self.id}"` : ""}
           ${self.inputMode ? `inputmode="${self.inputMode}"` : ""}
           ${self.max ? `max="${self.max}"` : ""}
