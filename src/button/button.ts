@@ -14,6 +14,7 @@ import style from "./style";
 class Button extends Echo(HTMLElement) {
   #disabled;
   #internals;
+  #label;
   #size;
   #type;
   #value;
@@ -28,6 +29,17 @@ class Button extends Echo(HTMLElement) {
   @repaint
   set disabled(value) {
     this.#disabled = value;
+  }
+
+  get label() {
+    return (this.#label ??= "");
+  }
+
+  @attributeChanged("label")
+  @dispatchEvent("labelChanged")
+  @repaint
+  set label(value) {
+    this.#label = value;
   }
 
   get size() {
