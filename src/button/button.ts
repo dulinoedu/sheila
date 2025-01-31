@@ -32,7 +32,7 @@ class Button extends Echo(HTMLElement) {
   }
 
   get label() {
-    return (this.#label ??= "");
+    return (this.#label ??= "Botão");
   }
 
   @attributeChanged("label")
