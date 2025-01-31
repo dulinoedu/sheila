@@ -36,20 +36,20 @@ function style(self) {
       --box-shadow-secondary-link: 0 0 0 transparent;
 
       --color-primary-solid: var(--color-neutral-white);
-      --color-primary-ghost: var(--color-primary-600);
-      --color-primary-link: var(--color-primary-600);
+      --color-primary-ghost: var(--color-primary-700);
+      --color-primary-link: var(--color-primary-700);
 
       --color-secondary-solid: var(--color-neutral-white);
-      --color-secondary-ghost: var(--color-secondary-600);
-      --color-secondary-link: var(--color-secondary-600);
+      --color-secondary-ghost: var(--color-secondary-700);
+      --color-secondary-link: var(--color-secondary-700);
 
       --color-primary-solid-active: var(--color-neutral-white);
-      --color-primary-ghost-active: var(--color-primary-700);
-      --color-primary-link-active: var(--color-primary-700);
+      --color-primary-ghost-active: var(--color-primary-800);
+      --color-primary-link-active: var(--color-primary-800);
 
       --color-secondary-solid-active: var(--color-neutral-white);
-      --color-secondary-ghost-active: var(--color-secondary-700);
-      --color-secondary-link-active: var(--color-secondary-700);
+      --color-secondary-ghost-active: var(--color-secondary-800);
+      --color-secondary-link-active: var(--color-secondary-800);
 
       --font-size-large: var(--font-size-display-xs);
       --font-size-medium: var(--font-size-xl);
