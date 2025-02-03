@@ -1,58 +1,64 @@
 :root {
-  --color-brand-primary: #3481b2;
-  --color-brand-primary-dark: #013660;
-  --color-brand-secondary: #fb601d;
+  --color-brand-primary: light-dark(#3481b2, #5daaf7);
+  --color-brand-primary-dark: light-dark(#013660, #91d6ff);
+  --color-brand-secondary: light-dark(#fb601d, #e6615e);
 
-  --color-academies-english: #002877;
-  --color-academies-game: #003838;
-  --color-academies-maker: #832821;
-  --color-academies-robotics: #230046;
-  --color-academies-inclusion: #710051;
+  --color-academies-english: light-dark(#002877, #6b7fcf);
+  --color-academies-game: light-dark(#003838, #56a5a5);
+  --color-academies-maker: light-dark(#832821, #c94d4b);
+  --color-academies-robotics: light-dark(#230046, #7757c6);
+  --color-academies-inclusion: light-dark(#710051, #bf5fb3);
 
-  --color-background-default: #f4fbff;
-  --color-background-white: #ffffff;
+  --color-background-default: light-dark(#f4fbff, #121212);
+  --color-background-white: light-dark(#ffffff, #1e1e1e);
 
-  --color-grey-50: #f0f0f0;
-  --color-grey-100: #e1e1e1;
-  --color-grey-200: #c3c3c3;
-  --color-grey-300: #a6a6a6;
-  --color-grey-400: #888888;
-  --color-grey-500: #6a6a6a;
-  --color-grey-600: #555555;
-  --color-grey-700: #404040;
-  --color-grey-800: #2a2a2a;
-  --color-grey-900: #151515;
-  --color-grey-1000: #0b0b0b;
+  --color-grey-50: light-dark(#f0f0f0, #3a3a3a);
+  --color-grey-100: light-dark(#e1e1e1, #404040);
+  --color-grey-200: light-dark(#c3c3c3, #555555);
+  --color-grey-300: light-dark(#a6a6a6, #6a6a6a);
+  --color-grey-400: light-dark(#888888, #888888);
+  --color-grey-500: light-dark(#6a6a6a, #a6a6a6);
+  --color-grey-600: light-dark(#555555, #c3c3c3);
+  --color-grey-700: light-dark(#404040, #e1e1e1);
+  --color-grey-800: light-dark(#2a2a2a, #f0f0f0);
+  --color-grey-900: light-dark(#151515, #fafafa);
+  --color-grey-1000: light-dark(#0b0b0b, #ffffff);
 
-  --color-neutral-white: #ffffff;
-  --color-neutral-black: #000000;
+  --color-neutral-white: light-dark(#ffffff, #121212);
+  --color-neutral-black: light-dark(#000000, #ffffff);
 
-  --color-primary-50: #ebf2f7;
-  --color-primary-100: #d6e6f0;
-  --color-primary-200: #aecde0;
-  --color-primary-300: #85b3d1;
-  --color-primary-400: #5d9ac1;
-  --color-primary-500: #3481b2;
-  --color-primary-600: #2a678e;
-  --color-primary-700: #1f4d6b;
-  --color-primary-800: #153447;
-  --color-primary-900: #0a1a24;
-  --color-primary-1000: #050d12;
+  --color-primary-50: light-dark(#ebf2f7, #1a1a1a);
+  --color-primary-100: light-dark(#d6e6f0, #2a2a2a);
+  --color-primary-200: light-dark(#aecde0, #3a3a3a);
+  --color-primary-300: light-dark(#85b3d1, #4a4a4a);
+  --color-primary-400: light-dark(#5d9ac1, #5d9ac1);
+  --color-primary-500: light-dark(#3481b2, #75bfff);
+  --color-primary-600: light-dark(#2a678e, #91d6ff);
+  --color-primary-700: light-dark(#1f4d6b, #a3e5ff);
+  --color-primary-800: light-dark(#153447, #b8f2ff);
+  --color-primary-900: light-dark(#0a1a24, #cff8ff);
+  --color-primary-1000: light-dark(#050d12, #e1fcff);
 
-  --color-secondary-50: #ffefe8;
-  --color-secondary-100: #fedfd2;
-  --color-secondary-200: #fdbfa5;
-  --color-secondary-300: #fda077;
-  --color-secondary-400: #fc804a;
-  --color-secondary-500: #fb601d;
-  --color-secondary-600: #c94d17;
-  --color-secondary-700: #973a11;
-  --color-secondary-800: #64260c;
-  --color-secondary-900: #321306;
-  --color-secondary-1000: #190a03;
+  --color-secondary-50: light-dark(#ffefe8, #1f1f1f);
+  --color-secondary-100: light-dark(#fedfd2, #2f2f2f);
+  --color-secondary-200: light-dark(#fdbfa5, #3f3f3f);
+  --color-secondary-300: light-dark(#fda077, #4f4f4f);
+  --color-secondary-400: light-dark(#fc804a, #fc804a);
+  --color-secondary-500: light-dark(#fb601d, #ff6b68);
+  --color-secondary-600: light-dark(#c94d17, #ff8f8c);
+  --color-secondary-700: light-dark(#973a11, #ffb3b0);
+  --color-secondary-800: light-dark(#64260c, #ffd6d4);
+  --color-secondary-900: light-dark(#321306, #ffebe9);
+  --color-secondary-1000: light-dark(#190a03, #fff5f4);
 
-  --color-red: #d41f1f;
+  --color-red: light-dark(#d41f1f, #ff6b68);
 
-  --color-gradient-1: linear-gradient(90deg, #0eb4b7ff 0%, #08d788ff 100%);
-  --color-gradient-2: linear-gradient(90deg, #013660ff 0%, #135086ff 100%);
+  --color-gradient-1: light-dark(
+    linear-gradient(90deg, #0eb4b7ff 0%, #08d788ff 100%),
+    linear-gradient(90deg, #0d7373ff 0%, #13a55eff 100%)
+  );
+  --color-gradient-2: light-dark(
+    linear-gradient(90deg, #013660ff 0%, #135086ff 100%),
+    linear-gradient(90deg, #224c78ff 0%, #3a6eacff 100%)
+  );
 }
