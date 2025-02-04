@@ -13,7 +13,7 @@ function style(self) {
       }
 
       slot {
-        color: var(--color-grey-600);
+        color: var(--color-master-dark);
         font-family: var(--font-family-base);
         font-size: var(--font-size-md);
         font-weight: var(--font-weight-regular);
