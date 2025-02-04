@@ -3,36 +3,36 @@ import { css } from "@bake-js/-o-id/dom";
 function style(self) {
   return css`
     :host {
-      --background-color-primary-solid: var(--color-primary-600);
-      --background-color-primary-ghost: var(--color-neutral-white);
+      --background-color-primary-solid: var(--color-complete);
+      --background-color-primary-ghost: var(--color-pure-white);
       --background-color-primary-link: transparent;
 
-      --background-color-secondary-solid: var(--color-secondary-600);
-      --background-color-secondary-ghost: var(--color-neutral-white);
+      --background-color-secondary-solid: var(--color-danger);
+      --background-color-secondary-ghost: var(--color-warning);
       --background-color-secondary-link: transparent;
 
-      --background-color-primary-solid-hover: var(--color-primary-700);
+      --background-color-primary-solid-hover: var(--color-complete-light);
       --background-color-primary-ghost-hover: var(--color-primary-50);
       --background-color-primary-link-hover: var(--color-primary-50);
 
-      --background-color-secondary-solid-hover: var(--color-secondary-700);
-      --background-color-secondary-ghost-hover: var(--color-secondary-50);
+      --background-color-secondary-solid-hover: var(--color-danger-light);
+      --background-color-secondary-ghost-hover: var(--color-warning-light);
       --background-color-secondary-link-hover: var(--color-secondary-50);
 
-      --border-color-primary-solid: var(--color-primary-500);
+      --border-color-primary-solid: var(--color-complete-light);
       --border-color-primary-ghost: var(--color-primary-500);
       --border-color-primary-link: transparent;
 
-      --border-color-secondary-solid: var(--color-secondary-500);
-      --border-color-secondary-ghost: var(--color-secondary-500);
+      --border-color-secondary-solid: var(--color-danger-light);
+      --border-color-secondary-ghost: var(--color-warning-light);
       --border-color-secondary-link: transparent;
 
-      --box-shadow-primary-solid: 0 12px 0 var(--color-primary-700);
+      --box-shadow-primary-solid: 0 12px 0 var(--color-complete-light);
       --box-shadow-primary-ghost: 0 12px 0 var(--color-primary-500);
       --box-shadow-primary-link: 0 0 0 transparent;
 
-      --box-shadow-secondary-solid: 0 12px 0 var(--color-secondary-700);
-      --box-shadow-secondary-ghost: 0 12px 0 var(--color-secondary-500);
+      --box-shadow-secondary-solid: 0 12px 0 var(--color-danger-light);
+      --box-shadow-secondary-ghost: 0 12px 0 var(--color-warning-light);
       --box-shadow-secondary-link: 0 0 0 transparent;
 
       --color-primary-solid: var(--color-neutral-white);
@@ -40,7 +40,7 @@ function style(self) {
       --color-primary-link: var(--color-primary-600);
 
       --color-secondary-solid: var(--color-neutral-white);
-      --color-secondary-ghost: var(--color-secondary-600);
+      --color-secondary-ghost: var(--color-neutral-white);
       --color-secondary-link: var(--color-secondary-600);
 
       --color-primary-solid-active: var(--color-neutral-white);
@@ -48,7 +48,7 @@ function style(self) {
       --color-primary-link-active: var(--color-primary-700);
 
       --color-secondary-solid-active: var(--color-neutral-white);
-      --color-secondary-ghost-active: var(--color-secondary-700);
+      --color-secondary-ghost-active: var(--color-neutral-white);
       --color-secondary-link-active: var(--color-secondary-700);
 
       --font-size-large: var(--font-size-display-xs);
