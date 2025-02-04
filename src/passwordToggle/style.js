@@ -3,7 +3,7 @@ import { css } from "@bake-js/-o-id/dom";
 function style(self) {
   return css`
     lxp-icon {
-      color: var(--color-grey-500); 
+      color: var(--color-master-dark); 
       cursor: pointer;
       position: absolute;
       right: ${self.right}px;

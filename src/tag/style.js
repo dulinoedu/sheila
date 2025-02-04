@@ -5,9 +5,9 @@ function style() {
     button {
       align-items: center;
       background-color: transparent;
-      border: 1px solid var(--color-brand-primary);
+      border: 1px solid var(--color-complete-light);
       border-radius: 100px;
-      color: var(--color-brand-primary);
+      color: var(--color-complete-light);
       cursor: pointer;
       display: flex;
       font-family: var(--font-family-base);
@@ -22,27 +22,28 @@ function style() {
     :host(:not(:state(disabled))) {
       button {
         &:hover {
-          background-color: var(--color-primary-50);
+          background-color: var(--color-complete-lighter);
+          color: var(--color-pure-black);
         }
       }
     }
 
     :host([selected]) {
       button {
-        background-color: var(--color-brand-primary);
-        color: var(--color-neutral-white);
+        background-color: var(--color-complete);
+        color: var(--color-pure-white);
 
         &:hover {
-          background-color: var(--color-brand-primary);
-          color: var(--color-neutral-white);
+          background-color: var(--color-complete-light);
+          color: var(--color-pure-black);
         }
       }
     }
 
     :host(:state(disabled)) {
       button {
-        border-color: var(--color-grey-200);
-        color: var(--color-grey-200);
+        border-color: var(--color-master-light);
+        color: var(--color-master);
         opacity: 0.4; 
       }
     }

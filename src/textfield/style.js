@@ -21,7 +21,7 @@ function style(self) {
     }
 
     .textField__label {
-      color: #6A6A6A;
+      color: var(--color-master-dark);
       font-weight: 500;
       font-family: 'maven pro';
       line-height: 19.2px;
@@ -34,9 +34,9 @@ function style(self) {
 
     .textField {
       appearance: none;
-      border: 1px solid #E1E1E1;
+      border: 1px solid var(--color-master-light);
       border-radius: 9px;
-      color: var(--color-grey-600);
+      color: var(--color-master-dark);
       font-family: 'maven pro';
       height: 44px;
       font-size: 16px;
@@ -80,7 +80,7 @@ function style(self) {
       }
 
       .textField {
-        border-color: red;
+        border-color: var(--color-danger);
         padding-right: 40px;
       }
     }

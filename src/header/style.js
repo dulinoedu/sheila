@@ -21,6 +21,7 @@ function style(self) {
       height: 120px;
       justify-content: space-between;
       max-width: 1440px;
+      padding: 0 20px;
       width: 100%;
     }
 

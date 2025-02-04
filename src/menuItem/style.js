@@ -6,7 +6,7 @@ function style() {
       align-items: center;
       border-radius: 8px;
       box-sizing: border-box;
-      color: var(--color-grey-600);
+      color: var(--color-master-dark);
       display: flex;
       cursor: pointer;
       display: flex;
@@ -20,13 +20,13 @@ function style() {
 
     :host(:not(:state(disabled))) {
       div:hover {
-        background-color: var(--color-primary-50);
+        background-color: var(--color-master-lightest);
       }
     }
 
     :host(:state(disabled)) {
       div {
-        color: var(--color-grey-200);
+        color: var(--color-master);
         cursor: default;
       }
     }
