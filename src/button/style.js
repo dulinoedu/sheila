@@ -88,6 +88,7 @@ function style(self) {
       gap: 4px;
       justify-content: center;
       padding: var(--padding-${self.size});
+      height: ${self.height};
       box-sizing: border-box;
       width: ${self.width};
     }
