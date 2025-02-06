@@ -89,6 +89,7 @@ function style(self) {
       justify-content: center;
       padding: var(--padding-${self.size});
       box-sizing: border-box;
+      width: ${self.width};
     }
 
     :host(:not(:state(disabled))) {

@@ -19,6 +19,7 @@ class Button extends Echo(HTMLElement) {
   #type;
   #value;
   #variant;
+  #width;
 
   get disabled() {
     return (this.#disabled ??= false);
@@ -51,6 +52,17 @@ class Button extends Echo(HTMLElement) {
   @repaint
   set size(value) {
     this.#size = value;
+  }
+
+  get width() {
+    return (this.#width ??= "");
+  }
+
+  @attributeChanged("width")
+  @dispatchEvent("widthChanged")
+  @repaint
+  set width(value) {
+    this.#width = value;
   }
 
   get type() {
