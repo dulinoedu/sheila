@@ -9,7 +9,6 @@ function style(self) {
       font-weight: var(--font-weight-${self.weight});
       line-height: var(--line-height-${self.size});
       text-align: ${self.textalign};
-      align-self: ${self.alignself}
     }
   `;
 }

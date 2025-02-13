@@ -16,17 +16,6 @@ class Text extends Echo(HTMLElement) {
   #weight;
   #value;
   #textalign;
-  #alignself;
-
-  get alignself() {
-    return (this.#alignself ??= "start");
-  }
-
-  @attributeChanged("alignself")
-  @dispatchEvent("alignselfChanged")
-  set alignself(value) {
-    this.#alignself = value;
-  }
 
   get color() {
     return (this.#color ??= "");
@@ -90,6 +79,7 @@ class Text extends Echo(HTMLElement) {
 
   @attributeChanged("textalign")
   @dispatchEvent("textalignChanged")
+  @repaint
   set textalign(value) {
     this.#textalign = value;
   }
