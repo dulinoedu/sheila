@@ -109,7 +109,7 @@ function style(self) {
 
     :host(:state(disabled)) {
       button {
-        opacity: 0.4; 
+        opacity: 1; 
       }
     }
   `;
